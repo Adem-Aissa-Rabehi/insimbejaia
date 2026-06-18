@@ -33,9 +33,19 @@ DB_PATH = os.path.join(DATA_DIR, "database.db")
 app = FastAPI(title="INSIM Bejaia Backend", version="2.0.0")
 
 # CORS middleware config
+origins = [
+    "https://insimbejaia.com",
+    "http://insimbejaia.com",
+    "https://www.insimbejaia.com",
+    "http://www.insimbejaia.com",
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:3000",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

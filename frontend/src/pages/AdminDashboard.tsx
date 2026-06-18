@@ -2372,7 +2372,7 @@ function AdminDashboard() {
                       <span style={{ color: '#10b981', fontWeight: '700' }}>✓</span>
                       <span style={{ color: 'var(--text-muted)', flex: 1 }}>Brochure actuelle :</span>
                       <a
-                        href={`http://localhost:5000${currentFormation.brochure}`}
+                        href={`${(import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000').replace(/\/$/, '')}${currentFormation.brochure}`}
                         target="_blank"
                         rel="noreferrer"
                         style={{ color: 'var(--primary)', textDecoration: 'underline', fontWeight: '600', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '180px' }}

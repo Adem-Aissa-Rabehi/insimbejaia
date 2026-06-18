@@ -94,7 +94,8 @@ function CourseDetails() {
 
   const handleDownloadPdf = () => {
     if (formation.brochure && formation.brochure.startsWith('/uploads/')) {
-      const fileUrl = `http://localhost:5000${formation.brochure}`;
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+      const fileUrl = `${apiBaseUrl.replace(/\/$/, '')}${formation.brochure}`;
       const link = document.createElement('a');
       link.href = fileUrl;
       link.download = formation.brochure.split('/').pop();
