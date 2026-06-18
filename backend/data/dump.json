@@ -15,114 +15,200 @@
   ],
   "filieres": [
     {
-      "id": "informatique-numerique",
-      "name": "Informatique & Numérique",
+      "id": "bts-informatique",
+      "name": "Informatique",
       "categoryId": "bts"
     },
     {
-      "id": "sciences-gestion",
-      "name": "Sciences de Gestion",
+      "id": "bts-gestion",
+      "name": "Gestion",
       "categoryId": "bts"
     },
     {
-      "id": "hotellerie-tourisme",
-      "name": "Hôtellerie & Tourisme",
-      "categoryId": "bts"
-    },
-    {
-      "id": "administration-secretariat-bt",
-      "name": "Administration & Secrétariat (BT)",
+      "id": "bt-informatique",
+      "name": "Informatique",
       "categoryId": "bt"
     },
     {
-      "id": "commerce-gestion-bt",
-      "name": "Commerce & Gestion (BT)",
+      "id": "bt-gestion",
+      "name": "Gestion",
       "categoryId": "bt"
     },
     {
-      "id": "tourisme-bt",
-      "name": "Tourisme & Voyage (BT)",
-      "categoryId": "bt"
-    },
-    {
-      "id": "bureau-cmp",
-      "name": "Secrétariat & Bureautique (CMP)",
+      "id": "cmp-informatique",
+      "name": "Informatique",
       "categoryId": "cmp"
     },
     {
-      "id": "services-cmp",
-      "name": "Services & Restauration (CMP)",
+      "id": "cmp-gestion",
+      "name": "Gestion",
       "categoryId": "cmp"
     }
   ],
   "formations": [
     {
       "id": "bts-administration-et-securite-des-reseaux-informatiques",
-      "title": "BTS Administration et Sécurité des Réseaux Informatiques",
+      "title": "Administration et Sécurité des Réseaux Informatiques",
       "categoryId": "bts",
-      "filiereId": "informatique-numerique",
-      "filiereName": "Informatique & Numérique",
+      "filiereId": "bts-informatique",
+      "filiereName": "Informatique",
       "description": "Devenez un expert des infrastructures système et réseau. Apprenez à concevoir, déployer, administrer et sécuriser des parcs informatiques d'entreprise en gérant les serveurs, la virtualisation, la sécurité périmétrique et la haute disponibilité.",
       "duration": "30 mois",
       "objectives": "[\"Configurer et optimiser les \\u00e9quipements r\\u00e9seau (routeurs, switchs)\", \"Administrer les serveurs Windows Server (Active Directory) et Linux\", \"Mettre en place des strat\\u00e9gies de s\\u00e9curit\\u00e9 et de pare-feu\", \"Superviser les infrastructures et g\\u00e9rer les plans de sauvegarde\"]",
       "brochure": "",
-      "semesters": "[{\"number\": 1, \"modules\": [\"Algorithmique & Structures de donn\\u00e9es\", \"Architecture des ordinateurs\", \"Math\\u00e9matiques appliqu\\u00e9es aux r\\u00e9seaux\", \"Bases des r\\u00e9seaux locaux (Cisco CCNA 1)\", \"Anglais technique\"]}, {\"number\": 2, \"modules\": [\"Routage et Commutation (Cisco CCNA 2)\", \"Syst\\u00e8mes d'exploitation client (Windows/Linux)\", \"Bases de donn\\u00e9es SQL\", \"\\u00c9lectricit\\u00e9 & Physique des transmissions\", \"Droit de l'informatique\"]}, {\"number\": 3, \"modules\": [\"S\\u00e9curit\\u00e9 des r\\u00e9seaux (Firewalls, VPN)\", \"Syst\\u00e8mes d'exploitation serveur (Active Directory, services DNS/DHCP)\", \"Virtualisation des serveurs (VMware/Hyper-V)\", \"Interconnexion des r\\u00e9seaux WAN\"]}, {\"number\": 4, \"modules\": [\"Projet d'int\\u00e9gration technique de fin d'\\u00e9tudes\", \"Stage pratique de 6 mois en milieu professionnel\", \"R\\u00e9daction et soutenance de m\\u00e9moire\"]}]"
+      "semesters": "[{\"number\": 1, \"modules\": [\"Syst\\u00e8me d'exploitation Windows\", \"Syst\\u00e8me d'exploitation linux\", \"Structure Machine\", \"Technique d'expression\", \"Anglais\", \"Bureautique\"]}, {\"number\": 2, \"modules\": [\"R\\u00e9seaux et s\\u00e9curit\\u00e9 r\\u00e9seau informatique\", \"Les r\\u00e9seaux WAN\", \"Administrer les \\u00e9quipements r\\u00e9seau\", \"Administration des services Linux\", \"Administration des services Windows\", \"Analyse des vuln\\u00e9rabilit\\u00e9s informatiques\", \"Technique d'expression\", \"Anglais\", \"Gestion des risques de la s\\u00e9curit\\u00e9 de l'information\"]}, {\"number\": 3, \"modules\": [\"Programmation Script et DevNet\", \"Cryptographie\", \"Hygi\\u00e8ne et s\\u00e9curit\\u00e9\", \"Protection du consommateur\", \"Les r\\u00e9seaux VPN\", \"Administration des services\", \"Surveillance s\\u00e9curit\\u00e9 du r\\u00e9seau\", \"Nouvelles tendances des r\\u00e9seaux\", \"Gestion des risques de la s\\u00e9curit\\u00e9 de l'information\"]}, {\"number\": 4, \"modules\": [\"Administration du service d'authentification\", \"Maintenance des r\\u00e9seaux\", \"Administrer les \\u00e9quipements s\\u00e9curit\\u00e9 r\\u00e9seau\", \"Haute disponibilit\\u00e9 des r\\u00e9seaux et des syst\\u00e8mes\", \"M\\u00e9thodologie\"]}]"
+    },
+    {
+      "id": "bts-agence-de-voyage",
+      "title": "Agence de voyage",
+      "categoryId": "bts",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Maîtrisez la conception, le conseil et la vente de produits touristiques. Cette formation vous prépare à gérer l'accueil, les réservations et la comptabilité commerciale au sein d'une agence de voyage ou d'un tour-opérateur.",
+      "duration": "30 mois",
+      "objectives": "[\"\\u00c9laborer et tarifer des produits et s\\u00e9jours touristiques\", \"Assurer l'accueil physique et t\\u00e9l\\u00e9phonique des clients\", \"Ma\\u00eetriser les logiciels de r\\u00e9servation (GDS, Amadeus)\", \"G\\u00e9rer le suivi commercial et comptable des dossiers clients\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Elaboration des produits touristiques\", \"Accueil des clients\", \"Vente des produits touristiques\", \"R\\u00e9servation des prestations et suivi\", \"Informatique et syst\\u00e8mes automatis\\u00e9s\", \"Techniques d'expressions (Arabe-Fran\\u00e7ais-Anglais)\", \"G\\u00e9ographie et histoire des civilisations\", \"Economie\", \"Droit\"]}, {\"number\": 2, \"modules\": [\"Elaboration des produits touristiques\", \"Accueil des clients\", \"Vente des produits touristiques\", \"R\\u00e9servation des prestations et suivi\", \"Gestion commerciale et comptable\", \"Informatique et syst\\u00e8mes automatis\\u00e9s\", \"Techniques d'expressions (Arabe-Fran\\u00e7ais-Anglais)\", \"G\\u00e9ographie et histoire des civilisations\", \"Economie\"]}, {\"number\": 3, \"modules\": [\"Elaboration des produits touristiques\", \"Accueil des clients\", \"Vente des produits touristiques\", \"R\\u00e9servation des prestations et suivi\", \"Gestion commerciale et comptable\", \"Informatique et syst\\u00e8mes automatis\\u00e9s\", \"Techniques d'expressions (Arabe-Fran\\u00e7ais-Anglais)\", \"G\\u00e9ographie et histoire des civilisations\"]}, {\"number\": 4, \"modules\": [\"Vente des produits touristiques\", \"R\\u00e9servation des prestations et suivi\", \"Gestion commerciale et comptable\", \"Informatique et syst\\u00e8mes automatis\\u00e9s\", \"Techniques de gestion\", \"Comptabilit\\u00e9\", \"Marketing\", \"Droit\"]}]"
+    },
+    {
+      "id": "bts-assurance",
+      "title": "Assurance",
+      "categoryId": "bts",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Devenez un professionnel de la gestion des risques et des contrats d'assurance. Apprenez à évaluer les besoins des clients, à élaborer des propositions adaptées et à gérer le règlement des sinistres.",
+      "duration": "30 mois",
+      "objectives": "[\"Analyser les risques et d\\u00e9terminer les besoins de couverture des clients\", \"R\\u00e9diger et adapter les contrats d'assurance\", \"G\\u00e9rer les sinistres et estimer les indemnit\\u00e9s dues\", \"Ma\\u00eetriser le droit commercial et la comptabilit\\u00e9 appliqu\\u00e9e\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Examen du risque\", \"D\\u00e9termination des besoins en assurance\", \"\\u00c9laboration des propositions\", \"\\u00c9tablissement des contrats d'assurance\", \"Protection et pr\\u00e9vention\", \"Technique d'expression et de communication\", \"Droit civil\", \"Droit commercial et assurance\", \"\\u00c9conomie d'entreprise\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Marketing\", \"Informatique\", \"Math\\u00e9matiques g\\u00e9n\\u00e9rales\", \"Anglais\"]}, {\"number\": 2, \"modules\": [\"Examen du risque\", \"\\u00c9laboration des propositions\", \"\\u00c9tablissement des contrats d'assurance\", \"Gestion des contrats d'assurance\", \"Gestion des \\u00e9tats des sinistres\", \"Protection et pr\\u00e9vention\", \"Technique d'expression et de communication\", \"Droit civil\", \"Droit commercial et assurance\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Marketing\", \"Math\\u00e9matiques financi\\u00e8res\", \"Statistiques\", \"Informatique\"]}, {\"number\": 3, \"modules\": [\"Gestion des contrats d'assurance\", \"Gestion des \\u00e9tats des sinistres\", \"Gestion des documents administratifs\", \"Gestion des \\u00e9tats de production\", \"Contact de l'environnement\", \"Protection et pr\\u00e9vention\", \"Technique d'expression et de communication\", \"Droit civil\", \"Droit commercial et assurance\", \"\\u00c9conomie d'entreprise\", \"Math\\u00e9matiques financi\\u00e8res\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Statistiques\", \"Informatique\"]}, {\"number\": 4, \"modules\": [\"D\\u00e9termination des besoins en assurance\", \"\\u00c9laboration des propositions\", \"Gestion des contrats d'assurance\", \"Gestion des \\u00e9tats des sinistres\", \"Gestion des documents administratifs\", \"Gestion des \\u00e9tats de production\", \"Contact de l'environnement\", \"Droit commercial et assurance\", \"\\u00c9conomie d'entreprise\", \"Math\\u00e9matiques financi\\u00e8res\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Statistiques\", \"Informatique\", \"Anglais\", \"M\\u00e9thodologie\"]}]"
+    },
+    {
+      "id": "bts-banque",
+      "title": "Banque",
+      "categoryId": "bts",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Formez-vous aux métiers de la relation client et de la gestion des opérations financières en milieu bancaire. Apprenez à conseiller la clientèle, à traiter les dépôts, virements et crédits tout en maîtrisant les risques.",
+      "duration": "30 mois",
+      "objectives": "[\"G\\u00e9rer et conseiller un portefeuille de clients particuliers\", \"R\\u00e9aliser et v\\u00e9rifier les op\\u00e9rations courantes de guichet\", \"\\u00c9tudier et monter des dossiers de demande de cr\\u00e9dit\", \"Ma\\u00eetriser le droit bancaire, la fiscalit\\u00e9 et la comptabilit\\u00e9 financi\\u00e8re\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Gestion de la client\\u00e8le\", \"R\\u00e9alisation des op\\u00e9rations de d\\u00e9p\\u00f4t\", \"Encaissement des effets de commerce\", \"Ex\\u00e9cution des op\\u00e9rations li\\u00e9es a l'achat ou la vente des valeur mobili\\u00e9re\", \"R\\u00e9alisation de l'op\\u00e9ration d'octroi de cr\\u00e9dit\", \"Technique d'expression\", \"Math\\u00e9matique financi\\u00e8re\", \"Droit commercial et bancaire\", \"Fiscalit\\u00e9\"]}, {\"number\": 2, \"modules\": [\"R\\u00e9alisation des op\\u00e9rations de d\\u00e9p\\u00f4t\", \"R\\u00e9alisation des op\\u00e9rations de retrait et de versement (DA et devise)\", \"Encaissement des effets de commerce\", \"Ex\\u00e9cution des op\\u00e9rations li\\u00e9es \\u00e0 l'achat ou la vente des valeurs mobili\\u00e8res\", \"R\\u00e9alisation de l'op\\u00e9ration d'octroi de cr\\u00e9dit\", \"Suivi des cr\\u00e9dits octroy\\u00e9s\", \"Technique d'expression\", \"Comptabilit\\u00e9 des op\\u00e9rations financi\\u00e8res\", \"Informatique\", \"Marketing bancaire\", \"Math\\u00e9matiques financiers\", \"\\u00c9conomie g\\u00e9n\\u00e9rale et mon\\u00e9taire\", \"Fiscalit\\u00e9\"]}, {\"number\": 3, \"modules\": [\"Identification des r\\u00e8gles de protection et de pr\\u00e9vention\", \"R\\u00e9alisation des op\\u00e9rations de retrait et de versement\", \"Ex\\u00e9cution des op\\u00e9rations de virement\", \"V\\u00e9rification des op\\u00e9rations effectu\\u00e9es\", \"Etudier le dossier de cr\\u00e9dit\", \"Evaluation des risques bancaires\", \"Comptabilit\\u00e9 des entreprises \\u00e9conomiques du commerce\", \"Statistiques et probabilit\\u00e9\", \"Anglais technique\", \"\\u00c9conomie g\\u00e9n\\u00e9rale et mon\\u00e9taire\"]}, {\"number\": 4, \"modules\": [\"R\\u00e9alisation des op\\u00e9rations de retrait et de versement (DA et devise)\", \"Ex\\u00e9cution des op\\u00e9rations de virement\", \"V\\u00e9rification des diff\\u00e9rentes op\\u00e9rations effectu\\u00e9es\", \"Etudier le dossier de cr\\u00e9dit\", \"Evaluation des risques bancaires li\\u00e9s aux cr\\u00e9dits octroy\\u00e9s\", \"Suivi des cr\\u00e9dits octroy\\u00e9s\", \"Gestion des op\\u00e9rations du commerce ext\\u00e9rieur\", \"Identification des r\\u00e8gles de protection et de pr\\u00e9vention\", \"Marketing bancaire\", \"Anglais technique\", \"M\\u00e9thodologie\"]}]"
+    },
+    {
+      "id": "bts-bases-de-donnees",
+      "title": "Bases de Données",
+      "categoryId": "bts",
+      "filiereId": "bts-informatique",
+      "filiereName": "Informatique",
+      "description": "Devenez un spécialiste de la modélisation, de l'implémentation et de l'administration des données. Apprenez à concevoir des architectures relationnelles robustes, à sécuriser les accès et à développer des applications web connectées.",
+      "duration": "30 mois",
+      "objectives": "[\"Concevoir et mod\\u00e9liser des bases de donn\\u00e9es relationnelles (UML)\", \"Administrer les serveurs de bases de donn\\u00e9es (SGBD SQL/NoSQL)\", \"Assurer la s\\u00e9curit\\u00e9, les sauvegardes et la r\\u00e9plication des donn\\u00e9es\", \"D\\u00e9velopper des applications web d'acc\\u00e8s aux bases de donn\\u00e9es \\u00e0 distance\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Structure machine\", \"Manipulation des syst\\u00e8mes d'exploitation\", \"Bureautique et internet\", \"Algorithmique\", \"Programmation proc\\u00e9durale\", \"Organisation et gestion des entreprises\"]}, {\"number\": 2, \"modules\": [\"Conception des bases de donn\\u00e9es en mod\\u00e8le relationnel\", \"UML\", \"Manipulation des bases de donn\\u00e9es relationnelles\", \"Programmation Orient\\u00e9e Objet\", \"R\\u00e9seau\", \"Communication professionnelle\", \"Anglais technique\"]}, {\"number\": 3, \"modules\": [\"Impl\\u00e9mentation des bases de donn\\u00e9es sous SGBD serveur\", \"Programmation Orient\\u00e9 Objet\", \"R\\u00e9seau informatique\", \"Communication professionnelle\", \"Anglais technique\", \"Protection du consommateur\", \"Gestion des bases de donne\\u00e9s pour le web\"]}, {\"number\": 4, \"modules\": [\"Administration des bases de donn\\u00e9es sous SGBD serveur\", \"Application d'acc\\u00e8s aux bases de donn\\u00e9es \\u00e0 distance\", \"Teste du produit final et documentation\", \"Gestion de projet\", \"M\\u00e9thodologie\", \"Technique de recherche d'emplois\"]}]"
+    },
+    {
+      "id": "bts-commerce-international",
+      "title": "Commerce International",
+      "categoryId": "bts",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Maîtrisez les opérations d'import-export et les techniques du commerce mondial. Cette formation aborde la négociation commerciale, les douanes, la logistique internationale et le financement international.",
+      "duration": "30 mois",
+      "objectives": "[\"Prospecter les march\\u00e9s \\u00e9trangers et n\\u00e9gocier \\u00e0 l'international\", \"\\u00c9tablir et suivre les documents de transport et de douane\", \"G\\u00e9rer la logistique d'approvisionnement et d'exp\\u00e9dition\", \"Ma\\u00eetriser le financement et l'assurance du commerce ext\\u00e9rieur\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Pratique du commerce international\", \"Prospection \\u00e0 l'international\", \"Gestion prix de vente\", \"Environnement \\u00e9conomique\", \"Environnement juridique\", \"Relations \\u00e9conomiques internationales\", \"Math\\u00e9matiques g\\u00e9n\\u00e9rales\", \"Statistiques descriptives\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Techniques d'expression\"]}, {\"number\": 2, \"modules\": [\"Prospection \\u00e0 l'international\", \"Exploitation des moyens de communication\", \"Documents commerciaux\", \"Comptabilit\\u00e9 analytique\", \"N\\u00e9gociations commerciales\", \"Math\\u00e9matiques g\\u00e9n\\u00e9rales\", \"Environnement juridique\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Techniques d'expression\", \"Informatique\", \"Anglais commercial\"]}, {\"number\": 3, \"modules\": [\"Commerce international appliqu\\u00e9\", \"Transport de marchandises \\u00e0 l'international\", \"Gestion de la qualit\\u00e9\", \"N\\u00e9gociations commerciales\", \"Techniques d'assurance\", \"Techniques douani\\u00e8res\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Techniques d'expression\", \"Financement des op\\u00e9rations du commerce ext\\u00e9rieur\", \"Finances internationales\"]}, {\"number\": 4, \"modules\": [\"Commerce international appliqu\\u00e9\", \"Transport de marchandises \\u00e0 l'international\", \"Gestion de la qualit\\u00e9\", \"N\\u00e9gociations commerciales\", \"Techniques d'assurance\", \"Techniques douani\\u00e8res\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Techniques d'expression\", \"Financement des op\\u00e9rations du commerce ext\\u00e9rieur\", \"Finances internationales\", \"Informatique\", \"Anglais commercial\", \"M\\u00e9thodologie\", \"Marketing international\"]}]"
+    },
+    {
+      "id": "bts-comptabilite-et-gestion",
+      "title": "Comptabilité et gestion",
+      "categoryId": "bts",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Une formation solide pour maîtriser la gestion comptable, fiscale et financière des entreprises. Apprenez à enregistrer les opérations comptables, à élaborer le bilan et le compte de résultat, à gérer la paie et à analyser les coûts.",
+      "duration": "30 mois",
+      "objectives": "[\"Enregistrer et contr\\u00f4ler les \\u00e9critures comptables quotidiennes\", \"\\u00c9tablir les d\\u00e9clarations fiscales et sociales r\\u00e9glementaires\", \"Produire les \\u00e9tats financiers annuels (bilan, TCR)\", \"Utiliser les logiciels comptables de r\\u00e9f\\u00e9rence (SAGE, PC Compta)\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Traitement et v\\u00e9rification des op\\u00e9rations commerciales\", \"Gestion des obligations fiscales et parafiscales\", \"Gestion des relations sociales\", \"Comptabilit\\u00e9 financi\\u00e8re\", \"Techniques d'expressions en Langue Fran\\u00e7aise\", \"Documents commerciaux\", \"L'environnement \\u00e9conomique de l'entit\\u00e9\", \"Math\\u00e9matiques financi\\u00e8res\", \"Environnement juridique de l'entreprise\", \"Statistiques descriptives\", \"Notions de base en langue anglaise\", \"Informatique\"]}, {\"number\": 2, \"modules\": [\"Traitement et v\\u00e9rification des op\\u00e9rations commerciales\", \"Production et contr\\u00f4le de l'information financi\\u00e8re\", \"Calculer les diff\\u00e9rents co\\u00fbts\", \"Comptabilit\\u00e9 financi\\u00e8re\", \"Techniques d'expressions en Langue Fran\\u00e7aise\", \"Fiabilisation de la qualit\\u00e9 et du syst\\u00e8me d'information\", \"Comptabilit\\u00e9 analytique d'exploitation\", \"L'environnement \\u00e9conomique de l'entit\\u00e9\", \"Documents commerciaux\", \"Environnement juridique de l'entreprise\", \"Math\\u00e9matiques financi\\u00e8res\"]}, {\"number\": 3, \"modules\": [\"R\\u00e9aliser les op\\u00e9rations d'inventaire\", \"Production et contr\\u00f4le de l'information financi\\u00e8re\", \"Gestion des relations sociales (paie + droit de travail)\", \"Calculer les diff\\u00e9rents co\\u00fbts\", \"Comptabilit\\u00e9 financi\\u00e8re\", \"Comptabilit\\u00e9 publique\", \"Fiabilisation de la qualit\\u00e9 et du syst\\u00e8me d'information\", \"Comptabilit\\u00e9 analytique d'exploitation\", \"L'environnement \\u00e9conomique de l'entit\\u00e9\", \"Environnement juridique de l'entreprise\", \"Math\\u00e9matiques g\\u00e9n\\u00e9rales et notions de base des probabilit\\u00e9s\", \"Notions de base en langue anglaise\", \"Informatique\", \"Techniques de communication en milieu professionnel\"]}, {\"number\": 4, \"modules\": [\"R\\u00e9aliser les op\\u00e9rations d'inventaire\", \"Production et contr\\u00f4le de l'information financi\\u00e8re\", \"Gestion des relations sociales\", \"\\u00c9laboration des \\u00e9tats financiers\", \"Analyse de la situation financi\\u00e8re\", \"Gestion budg\\u00e9taire de l'entreprise\", \"Gestion de la tr\\u00e9sorerie\", \"Comptabilit\\u00e9 publique\", \"Fiabilisation de la qualit\\u00e9 et du syst\\u00e8me d'information\", \"Notions de base en langue anglaise\", \"Informatique\", \"Techniques de communication en milieu professionnel\"]}]"
     },
     {
       "id": "bts-developpeur-web-et-mobile",
-      "title": "BTS Développeur Web et Mobile",
+      "title": "Développeur Web et Mobile",
       "categoryId": "bts",
-      "filiereId": "informatique-numerique",
-      "filiereName": "Informatique & Numérique",
+      "filiereId": "bts-informatique",
+      "filiereName": "Informatique",
       "description": "Formez-vous aux langages et frameworks les plus demandés du marché. Cette formation vous enseigne le développement frontend et backend, la création d'applications mobiles natives et hybrides, ainsi que la modélisation de bases de données performantes.",
       "duration": "30 mois",
       "objectives": "[\"D\\u00e9velopper des interfaces web modernes et r\\u00e9actives (React, Vue)\", \"Cr\\u00e9er et documenter des API RESTful avec Node.js, FastAPI ou Django\", \"Concevoir des applications mobiles Android et iOS\", \"Ma\\u00eetriser les outils de versioning (Git) et de d\\u00e9ploiement continu\"]",
       "brochure": "",
-      "semesters": "[{\"number\": 1, \"modules\": [\"Logique algorithmique et pseudo-code\", \"Bases de l'int\\u00e9gration Web (HTML5, CSS3, Responsive Design)\", \"Introduction aux bases de donn\\u00e9es SQL\", \"Architecture Web & Protocoles (HTTP)\", \"Anglais technique\"]}, {\"number\": 2, \"modules\": [\"Programmation JavaScript moderne (ES6+)\", \"D\\u00e9veloppement Backend I (Python & FastAPI ou Node.js)\", \"Conception UI/UX & Maquettage Figma\", \"Syst\\u00e8me d'exploitation Linux & Ligne de commande\"]}, {\"number\": 3, \"modules\": [\"D\\u00e9veloppement Frontend avec React.js\", \"D\\u00e9veloppement Mobile Hybride (Flutter / React Native)\", \"S\\u00e9curit\\u00e9 des applications Web (OWASP)\", \"Bases de donn\\u00e9es NoSQL (MongoDB, Redis)\", \"Versionnage de code (Git/GitHub)\"]}, {\"number\": 4, \"modules\": [\"Projet de synth\\u00e8se et d\\u00e9veloppement d'une application compl\\u00e8te\", \"Stage d'immersion pratique en entreprise (6 mois)\", \"R\\u00e9daction du m\\u00e9moire de stage\"]}]"
-    },
-    {
-      "id": "bts-comptabilite-et-gestion",
-      "title": "BTS Comptabilité et Gestion",
-      "categoryId": "bts",
-      "filiereId": "sciences-gestion",
-      "filiereName": "Sciences de Gestion",
-      "description": "Une formation solide pour maîtriser la gestion comptable, fiscale et financière des entreprises. Apprenez à enregistrer les opérations comptables, à élaborer le bilan et le compte de résultat, à gérer la paie et à analyser les coûts pour guider les décisions de gestion.",
-      "duration": "30 mois",
-      "objectives": "[\"Enregistrer et contr\\u00f4ler les \\u00e9critures comptables quotidiennes\", \"\\u00c9tablir les d\\u00e9clarations fiscales et sociales r\\u00e9glementaires\", \"Produire les \\u00e9tats financiers annuels (bilan, TCR)\", \"Utiliser les logiciels comptables de r\\u00e9f\\u00e9rence (SAGE, PC Compta)\"]",
-      "brochure": "",
-      "semesters": "[{\"number\": 1, \"modules\": [\"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale I (Principes de base)\", \"Micro\\u00e9conomie\", \"Droit civil et commercial\", \"Math\\u00e9matiques financi\\u00e8res\", \"Bureautique appliqu\\u00e9e (MS Excel avanc\\u00e9)\"]}, {\"number\": 2, \"modules\": [\"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale II (Op\\u00e9rations d'inventaire)\", \"Fiscalit\\u00e9 des entreprises (TVA, IBS, IRG)\", \"Droit du travail & L\\u00e9gislation sociale\", \"Comptabilit\\u00e9 analytique de gestion\"]}, {\"number\": 3, \"modules\": [\"Analyse financi\\u00e8re & Diagnostic de l'entreprise\", \"Comptabilit\\u00e9 des soci\\u00e9t\\u00e9s\", \"Gestion budg\\u00e9taire & Plan de tr\\u00e9sorerie\", \"Logiciels de comptabilit\\u00e9 et de paie int\\u00e9gr\\u00e9s\"]}, {\"number\": 4, \"modules\": [\"\\u00c9tude de cas comptable approfondie\", \"Stage pratique en cabinet d'expertise comptable ou entreprise (6 mois)\", \"R\\u00e9daction du m\\u00e9moire\"]}]"
+      "semesters": "[{\"number\": 1, \"modules\": [\"Les interfaces utilisateurs statiques\", \"M\\u00e9thodes de conception des applications web\", \"Syst\\u00e8me d'exploitation et bureautique\", \"Programmation proc\\u00e9durale\", \"Traitement d'images\", \"Anglais technique\"]}, {\"number\": 2, \"modules\": [\"Les interfaces utilisateurs interactives\", \"M\\u00e9thodes de conception des applications web\", \"Programmation orient\\u00e9e objet\", \"Bases de donn\\u00e9es\", \"R\\u00e9seau informatique\", \"Communication professionnelle\", \"Protection du consommateur\"]}, {\"number\": 3, \"modules\": [\"Gestion des bases de donn\\u00e9es web\", \"Programmation web cot\\u00e9 serveur\", \"Applications web mobile native\", \"Syst\\u00e8me de gestion de contenu (CMS)\", \"Etude de projet\"]}, {\"number\": 4, \"modules\": [\"Applications web monopage cot\\u00e9 client\", \"Applications web mobile multiplateforme\", \"D\\u00e9velopper des applications m\\u00e9tier\", \"Teste du produit et documentation\", \"Etude de projet\", \"Marketing digital\", \"M\\u00e9thodologie\"]}]"
     },
     {
       "id": "bts-gestion-des-ressources-humaines",
-      "title": "BTS Gestion des Ressources Humaines",
+      "title": "Gestion des Ressources Humaines",
       "categoryId": "bts",
-      "filiereId": "sciences-gestion",
-      "filiereName": "Sciences de Gestion",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
       "description": "Préparez-vous à gérer le capital humain de l'entreprise. Ce programme aborde l'administration du personnel (contrats, paie, congés), le recrutement, la formation professionnelle, la gestion des compétences (GPEC) et les relations sociales.",
       "duration": "30 mois",
       "objectives": "[\"Assurer la gestion administrative quotidienne du personnel\", \"\\u00c9tablir la paie et pr\\u00e9parer les d\\u00e9clarations sociales\", \"Mener des entretiens de recrutement et int\\u00e9grer les collaborateurs\", \"\\u00c9laborer et budg\\u00e9tiser un plan de formation d'entreprise\"]",
       "brochure": "",
-      "semesters": "[{\"number\": 1, \"modules\": [\"Introduction aux Ressources Humaines\", \"Droit du travail & Contrat de travail\", \"Psychologie du travail\", \"Techniques d'expression et de communication\", \"Logiciels de secr\\u00e9tariat\"]}, {\"number\": 2, \"modules\": [\"Administration du personnel (Cong\\u00e9s, Absences, Retraites)\", \"Techniques de paie et charges sociales\", \"Gestion pr\\u00e9visionnelle des emplois et des comp\\u00e9tences (GPEC)\", \"Logiciels de gestion de paie\"]}, {\"number\": 3, \"modules\": [\"Processus de recrutement et d'int\\u00e9gration\", \"Ing\\u00e9nierie de la formation professionnelle\", \"N\\u00e9gociation collective et relations sociales\", \"Sant\\u00e9, s\\u00e9curit\\u00e9 et hygi\\u00e8ne au travail\"]}, {\"number\": 4, \"modules\": [\"\\u00c9tude de cas en management des ressources humaines\", \"Stage d'application pratique de 6 mois en service RH\", \"R\\u00e9daction et soutenance de m\\u00e9moire\"]}]"
+      "semesters": "[{\"number\": 1, \"modules\": [\"Introduction \\u00e0 la gestion des ressources humaines\", \"\\u00c9tude des postes de travail\", \"Droit du travail\", \"Droit de la fonction publique\", \"Droit de la s\\u00e9curit\\u00e9 sociale\", \"Communication professionnelle\", \"Relations humaines\", \"Organisation et fonctionnement des organismes\", \"Techniques d'expression (Fran\\u00e7ais)\", \"Statistiques descriptives\"]}, {\"number\": 2, \"modules\": [\"Politiques de la gestion des ressources humaines\", \"\\u00c9tude des postes de travail\", \"Gestion pr\\u00e9visionnelle des ressources humaines\", \"Droit du travail\", \"Droit de la fonction publique\", \"Droit de la s\\u00e9curit\\u00e9 sociale\", \"Communication professionnelle\", \"Relations humaines\", \"Organisation et fonctionnement des organismes\", \"Techniques d'expression (Fran\\u00e7ais)\", \"Statistiques descriptives\"]}, {\"number\": 3, \"modules\": [\"Recrutement du personnel\", \"Formation et d\\u00e9veloppement du personnel\", \"Droit du travail\", \"Droit de la fonction publique\", \"R\\u00e9daction administrative\", \"Psychologie du travail\", \"Hygi\\u00e8ne, s\\u00e9curit\\u00e9 et environnement\", \"Techniques d'expression (Anglais)\", \"Informatique\"]}, {\"number\": 4, \"modules\": [\"\\u00c9valuation du personnel\", \"Stimulation du personnel\", \"Absent\\u00e9isme et roulement des effectifs\", \"Droit du travail\", \"Droit de la fonction publique\", \"R\\u00e9daction administrative\", \"Psychologie du travail\", \"Hygi\\u00e8ne, s\\u00e9curit\\u00e9 et environnement\", \"Techniques d'expression (Anglais)\", \"Informatique\"]}]"
     },
     {
-      "id": "bts-gestion-et-administration-hotelieres",
-      "title": "BTS Gestion et Administration Hôtelières",
+      "id": "bts-marketing",
+      "title": "Marketing",
       "categoryId": "bts",
-      "filiereId": "hotellerie-tourisme",
-      "filiereName": "Hôtellerie & Tourisme",
-      "description": "Formez-vous aux postes d'encadrement dans les grands hôtels et restaurants. Maîtrisez le management des équipes d'hébergement et de restauration, la gestion financière d'exploitation, l'accueil haut de gamme et la commercialisation touristique.",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Apprenez à élaborer des stratégies commerciales, analyser les marchés et mener des campagnes marketing. Devenez un expert de l'enquête marketing, de la distribution, de la publicité et de la relation client.",
       "duration": "30 mois",
-      "objectives": "[\"Superviser les op\\u00e9rations d'accueil et d'h\\u00e9bergement (Front Office)\", \"Manager les \\u00e9quipes de service en restauration et d'\\u00e9tage\", \"G\\u00e9rer les achats, les stocks et optimiser la rentabilit\\u00e9\", \"Assurer la commercialisation et la communication de l'\\u00e9tablissement\"]",
+      "objectives": "[\"Mener et analyser des enqu\\u00eates de satisfaction et \\u00e9tudes de march\\u00e9\", \"Concevoir des campagnes de communication et de publicit\\u00e9\", \"G\\u00e9rer la force de vente et mener des n\\u00e9gociations commerciales\", \"Ma\\u00eetriser les concepts fondamentaux du marketing strat\\u00e9gique et op\\u00e9rationnel\"]",
       "brochure": "",
-      "semesters": "[{\"number\": 1, \"modules\": [\"Techniques de service en h\\u00f4tellerie\", \"Introduction au tourisme et \\u00e0 l'h\\u00e9bergement\", \"Hygi\\u00e8ne, s\\u00e9curit\\u00e9 et normes h\\u00f4teli\\u00e8res\", \"Anglais de l'h\\u00f4tellerie I\", \"Bureautique appliqu\\u00e9e\"]}, {\"number\": 2, \"modules\": [\"Gestion et comptabilit\\u00e9 d'exploitation\", \"Techniques de service en restauration (F&B)\", \"Communication professionnelle & Relation client\", \"Allemand ou Espagnol h\\u00f4telier I\"]}, {\"number\": 3, \"modules\": [\"Management d'\\u00e9quipes h\\u00f4teli\\u00e8res\", \"Yield Management & Tarification dynamique\", \"Marketing h\\u00f4telier et promotion digitale\", \"L\\u00e9gislation h\\u00f4teli\\u00e8re et touristique\"]}, {\"number\": 4, \"modules\": [\"Projet d'\\u00e9v\\u00e9nementiel ou d'exploitation h\\u00f4teli\\u00e8re\", \"Stage de 6 mois dans un \\u00e9tablissement h\\u00f4telier conventionn\\u00e9\", \"M\\u00e9moire de stage\"]}]"
+      "semesters": "[{\"number\": 1, \"modules\": [\"Concepts fondamentaux du marketing\", \"Politique de communication\", \"Techniques d'expression\", \"Comptabilit\\u00e9 g\\u00e9n\\u00e9rale\", \"Math\\u00e9matiques g\\u00e9n\\u00e9rale\", \"Statistiques descriptives\", \"Environnement \\u00e9conomique\", \"Politique de prix\", \"Politique de produit\"]}, {\"number\": 2, \"modules\": [\"Techniques d'enqu\\u00eate marketing\", \"Comportement du consommateur\", \"Compagne de publicit\\u00e9\", \"Politique de distribution\", \"Gestion de la force de vente\", \"Comptabilit\\u00e9 analytique\", \"Environnement juridique\", \"Math\\u00e9matiques financiers\", \"Technique d'expression\"]}, {\"number\": 3, \"modules\": [\"Techniques d'enqu\\u00eate marketing\", \"Comportement du consommateur\", \"Marketing strat\\u00e9gique\", \"Techniques d'am\\u00e9nagement des points de vente\", \"Gestion de la force de vente\", \"Gestion budg\\u00e9taire\", \"Informatique\", \"Environnement juridique\", \"Recherche op\\u00e9rationnelle\", \"Marketing industriel\", \"Marketing des services\", \"Anglais commercial\"]}, {\"number\": 4, \"modules\": [\"Marketing strat\\u00e9gique\", \"Prospection des march\\u00e9s \\u00e9trangers\", \"N\\u00e9gociation et relation clients\", \"Marketing industriel\", \"Marketing des services\", \"Informatique\", \"Commerce et documents commerciaux\", \"Anglais commercial\", \"M\\u00e9thodologie de la recherche\", \"Gestion bugetaire\"]}]"
+    },
+    {
+      "id": "bt-agent-de-transit-et-de-dedouanement",
+      "title": "Agent de transit et de dédouanement",
+      "categoryId": "bt",
+      "filiereId": "bt-gestion",
+      "filiereName": "Gestion",
+      "description": "Formez-vous aux procédures douanières et logistiques de l'import-export. Apprenez à organiser la manutention, l'enlèvement des marchandises et à traiter le dédouanement dans le respect de la réglementation.",
+      "duration": "24 mois",
+      "objectives": "[\"Ma\\u00eetriser les r\\u00e9glementations et techniques douani\\u00e8res\", \"Organiser la logistique de transport et de transit des marchandises\", \"\\u00c9tablir les d\\u00e9clarations et documents commerciaux d'import-export\", \"Calculer les droits et taxes douaniers applicables\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Administration des douanes\", \"Organisation de la manutention et de l'enl\\u00e8vement\", \"Techniques et proc\\u00e9dures de d\\u00e9douanement\", \"R\\u00e9gimes douaniers \\u00e9conomiques\", \"Commerce international\", \"Documents commerciaux\", \"Arithm\\u00e9tique commerciale\", \"Communication et techniques d'accueil\", \"Techniques d'expression et r\\u00e9daction\", \"Anglais des affaires\"]}, {\"number\": 2, \"modules\": [\"Administration des douanes\", \"Organisation de la manutention et de l'enl\\u00e8vement\", \"Techniques et proc\\u00e9dures de d\\u00e9douanement\", \"R\\u00e9gimes douaniers \\u00e9conomiques\", \"Valeur en douane\", \"Syst\\u00e8me harmonis\\u00e9\", \"Origine des marchandises\", \"Les transports\", \"Commerce international\", \"Documents commerciaux\", \"Arithm\\u00e9tique commerciale\", \"Informatique\", \"Techniques d'expression et r\\u00e9daction\", \"Communication et techniques d'accueil\", \"Anglais des affaires\"]}, {\"number\": 3, \"modules\": [\"Valeur en douane\", \"Tarifs douaniers\", \"Syst\\u00e8me harmonis\\u00e9\", \"Origine des marchandises\", \"Contentieux douanier\", \"Assurance de marchandises\", \"Fiscalit\\u00e9 douani\\u00e8re\", \"Communication et techniques d'accueil\", \"Informatique\"]}, {\"number\": 4, \"modules\": [\"Tarifs douaniers\", \"Contentieux douanier\", \"Assurance de marchandises\", \"Fiscalit\\u00e9 douani\\u00e8re\", \"Module d'\\u00e9valuation\"]}]"
+    },
+    {
+      "id": "cmp-banque",
+      "title": "Banque",
+      "categoryId": "cmp",
+      "filiereId": "cmp-gestion",
+      "filiereName": "Gestion",
+      "description": "Une formation pratique pour maîtriser les opérations classiques de banque. Apprenez à recevoir la clientèle, traiter les dépôts, retraits et virements tout en gérant les documents commerciaux.",
+      "duration": "12 mois",
+      "objectives": "[\"Accueillir et orienter les clients en agence bancaire\", \"R\\u00e9aliser et contr\\u00f4ler les op\\u00e9rations courantes de d\\u00e9p\\u00f4t et retrait\", \"Effectuer le traitement des virements et des moyens de paiement\", \"Ma\\u00eetriser l'arithm\\u00e9tique commerciale et les notions comptables de base\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"R\\u00e9ception de la client\\u00e8le\", \"R\\u00e9alisation des op\\u00e9rations de d\\u00e9p\\u00f4ts\", \"Technique d'expression et de communication\", \"Droit civil et commercial\", \"Initiation \\u00e0 l'\\u00e9conomie d'entreprise\", \"Commerce et documents commerciaux\", \"Initiation \\u00e0 la technique comptable\", \"Arithm\\u00e9tiques commerciales\", \"L\\u00e9gislation\", \"Initiation \\u00e0 l'\\u00e9conomie g\\u00e9n\\u00e9rale\", \"Anglais\", \"Op\\u00e9rations classiques de banque\", \"Informatique\"]}, {\"number\": 2, \"modules\": [\"R\\u00e9alisation des op\\u00e9rations de d\\u00e9p\\u00f4ts\", \"R\\u00e9alisation des op\\u00e9rations de retrait\", \"R\\u00e9alisation des op\\u00e9rations de virement\", \"Technique d'expression et de communication\", \"Droit civil et commercial\", \"Initiation \\u00e0 l'\\u00e9conomie d'entreprise\", \"Commerce et documents commerciaux\", \"Initiation \\u00e0 la technique comptable\", \"Arithm\\u00e9tiques commerciales\", \"L\\u00e9gislation\", \"Initiation \\u00e0 l'\\u00e9conomie g\\u00e9n\\u00e9rale\", \"Anglais\", \"Op\\u00e9rations classiques de banque\", \"Informatique\"]}, {\"number\": 3, \"modules\": [\"R\\u00e9alisation des op\\u00e9rations de retrait\", \"R\\u00e9alisation des op\\u00e9rations de virement\", \"Contr\\u00f4le des op\\u00e9rations effectu\\u00e9es\", \"Technique d'expression et de communication\", \"Initiation \\u00e0 l'\\u00e9conomie d'entreprise\", \"Commerce et documents commerciaux\", \"Initiation \\u00e0 la technique comptable\", \"Arithm\\u00e9tiques commerciales\", \"Initiation \\u00e0 l'\\u00e9conomie g\\u00e9n\\u00e9rale\", \"Anglais\", \"Op\\u00e9rations classiques de banque\", \"Informatique\"]}]"
+    },
+    {
+      "id": "cmp-comptabilite",
+      "title": "Comptabilité",
+      "categoryId": "cmp",
+      "filiereId": "cmp-gestion",
+      "filiereName": "Gestion",
+      "description": "Apprenez les bases de la comptabilité générale d'entreprise. Maîtrisez le classement des pièces de base, l'enregistrement des écritures comptables quotidiennes et la préparation des états financiers.",
+      "duration": "12 mois",
+      "objectives": "[\"\\u00c9tudier, classer et archiver les documents comptables de base\", \"R\\u00e9aliser l'enregistrement comptable des pi\\u00e8ces au journal\", \"Reporter et v\\u00e9rifier les \\u00e9critures au grand livre et \\u00e0 la balance\", \"Participer aux travaux de fin d'exercice et \\u00e0 l'\\u00e9dition des \\u00e9tats financiers\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"\\u00c9tude et classement des documents de base\", \"Enregistrement comptable des documents\", \"Report et contr\\u00f4le des \\u00e9critures comptables\", \"\\u00c9tude du syst\\u00e8me comptable financier\", \"Arithm\\u00e9tique commerciale\", \"Documents commerciaux\", \"\\u00c9conomie et organisation d'entreprise\", \"Informatique\", \"Techniques d'expression (Fran\\u00e7ais)\", \"Correspondance commerciale\", \"L\\u00e9gislation du travail\", \"Droit commercial\"]}, {\"number\": 2, \"modules\": [\"\\u00c9tude et classement des documents de base\", \"Enregistrement comptable des documents\", \"Report et contr\\u00f4le des \\u00e9critures comptables\", \"\\u00c9tude du syst\\u00e8me comptable financier\", \"Travaux de fin d'exercice\", \"\\u00c9tudes de cas pratiques de l'entit\\u00e9\", \"Arithm\\u00e9tique commerciale\", \"Documents commerciaux\", \"\\u00c9conomie et organisation d'entreprise\", \"Classement\", \"Informatique\", \"Techniques d'expression (Fran\\u00e7ais)\", \"Correspondance commerciale\", \"L\\u00e9gislation du travail\", \"Droit commercial\"]}, {\"number\": 3, \"modules\": [\"Travaux de fin d'exercice\", \"Pr\\u00e9sentation des \\u00e9tats financiers\", \"\\u00c9tudes de cas pratiques de l'entit\\u00e9\", \"Informatique\", \"Techniques d'expression (Fran\\u00e7ais)\", \"Etude du syst\\u00e8me comptable financier\", \"Classement\"]}]"
     },
     {
       "id": "bt-secretariat-de-direction",
-      "title": "BT Secrétariat de Direction",
+      "title": "Secrétariat de Direction",
       "categoryId": "bt",
-      "filiereId": "administration-secretariat-bt",
-      "filiereName": "Administration & Secrétariat (BT)",
-      "description": "Devenez le collaborateur direct de la direction générale. Apprenez à gérer les flux d'informations, organiser les réunions et les déplacements, rédiger les courriers officiels et concevoir des outils de suivi de dossiers administratifs.",
+      "filiereId": "bt-gestion",
+      "filiereName": "Gestion",
+      "description": "Devenez le collaborateur direct de la direction générale. Apprenez à gérer les flux d'informations, organiser les réunions et les déplacements, rédiger les courriers officiels et concevoir des outils de suivi.",
       "duration": "24 mois",
       "objectives": "[\"Assurer le traitement et la r\\u00e9daction des courriers professionnels\", \"Organiser les agendas complexes et planifier les \\u00e9v\\u00e9nements de direction\", \"Prendre des notes en r\\u00e9union et r\\u00e9diger les comptes-rendus\", \"Classer et archiver les dossiers de mani\\u00e8re physique et num\\u00e9rique\"]",
       "brochure": "",
@@ -130,11 +216,11 @@
     },
     {
       "id": "bt-vente-et-commerce",
-      "title": "BT Vente et Commerce",
+      "title": "Vente et Commerce",
       "categoryId": "bt",
-      "filiereId": "commerce-gestion-bt",
-      "filiereName": "Commerce & Gestion (BT)",
-      "description": "Apprenez les bases du commerce et de la vente. Cette formation pratique vous prépare à conseiller les clients, à agencer les rayons de vente, à négocier les achats et à gérer les encaissements en magasin ou en agence commerciale.",
+      "filiereId": "bt-gestion",
+      "filiereName": "Gestion",
+      "description": "Apprenez les bases du commerce et de la vente. Cette formation pratique vous prépare à conseiller les clients, à agencer les rayons de vente, à négocier les achats et à gérer les encaissements.",
       "duration": "24 mois",
       "objectives": "[\"Accueillir les clients et mener des entretiens de vente\", \"G\\u00e9rer les stocks et approvisionner le point de vente\", \"R\\u00e9aliser des devis, factures et g\\u00e9rer la caisse\", \"Mettre en valeur les produits (merchandising)\"]",
       "brochure": "",
@@ -142,11 +228,11 @@
     },
     {
       "id": "cmp-operateur-de-saisie",
-      "title": "CMP Opérateur de Saisie",
+      "title": "Opérateur de Saisie",
       "categoryId": "cmp",
-      "filiereId": "bureau-cmp",
-      "filiereName": "Secrétariat & Bureautique (CMP)",
-      "description": "Une formation de niveau CMP axée sur la rapidité et l'exactitude de saisie. Maîtrisez le clavier à l'aveugle, la mise en forme de documents bureautiques simples, l'alimentation de bases de données et les tâches d'archivage courantes.",
+      "filiereId": "cmp-informatique",
+      "filiereName": "Informatique",
+      "description": "Une formation de niveau CMP axée sur la rapidité et l'exactitude de saisie. Maîtrisez le clavier à l'aveugle, la mise en forme de documents bureautiques simples, l'alimentation de bases de données.",
       "duration": "12 mois",
       "objectives": "[\"Saisir rapidement et sans erreurs des donn\\u00e9es textes et chiffr\\u00e9es\", \"Ma\\u00eetriser les raccourcis clavier et l'outil Microsoft Word / Excel\", \"Trier, indexer et archiver des dossiers num\\u00e9riques\", \"V\\u00e9rifier l'exactitude des informations \\u00e0 ins\\u00e9rer dans le syst\\u00e8me\"]",
       "brochure": "",
@@ -154,15 +240,27 @@
     },
     {
       "id": "cmp-agent-d-accueil-et-reception",
-      "title": "CMP Agent d'Accueil et Réception",
+      "title": "Agent d'Accueil et Réception",
       "categoryId": "cmp",
-      "filiereId": "services-cmp",
-      "filiereName": "Services & Restauration (CMP)",
+      "filiereId": "cmp-gestion",
+      "filiereName": "Gestion",
       "description": "Devenez le premier visage d'une organisation. Cette formation prépare aux métiers d'accueil d'entreprise ou d'administration, en travaillant la posture professionnelle, la gestion du standard, l'orientation des visiteurs et l'anglais d'accueil de base.",
       "duration": "12 mois",
       "objectives": "[\"Accueillir chaleureusement les visiteurs physiques\", \"Filtrer et orienter les appels t\\u00e9l\\u00e9phoniques (gestion de standard)\", \"Prendre des messages et les transmettre aux bons services\", \"G\\u00e9rer les registres d'entr\\u00e9es et de sorties d'\\u00e9tablissement\"]",
       "brochure": "",
       "semesters": "[{\"number\": 1, \"modules\": [\"Techniques d'accueil & Posture d'agent\", \"Techniques d'\\u00e9coute & Communication orale\", \"Gestion du standard t\\u00e9l\\u00e9phonique\", \"Vocabulaire d'accueil en fran\\u00e7ais\"]}, {\"number\": 2, \"modules\": [\"Bases de l'anglais d'accueil\", \"Introduction \\u00e0 la bureautique de secr\\u00e9tariat d'accueil\", \"Stage en entreprise d'accueil (2 mois)\", \"Simulation finale d'accueil et gestion des conflits\"]}]"
+    },
+    {
+      "id": "bts-gestion-et-administration-hotelieres",
+      "title": "Gestion et Administration Hôtelières",
+      "categoryId": "bts",
+      "filiereId": "bts-gestion",
+      "filiereName": "Gestion",
+      "description": "Formez-vous aux fonctions d'encadrement et de gestion au sein des établissements hôteliers.",
+      "duration": "30 mois",
+      "objectives": "[\"G\\u00e9rer l'accueil des clients\", \"Superviser les op\\u00e9rations d'h\\u00e9bergement\", \"Administrer les activit\\u00e9s de restauration\"]",
+      "brochure": "",
+      "semesters": "[{\"number\": 1, \"modules\": [\"Techniques de service en h\\u00f4tellerie\", \"Introduction au tourisme et \\u00e0 l'h\\u00e9bergement\", \"Hygi\\u00e8ne, s\\u00e9curit\\u00e9 et normes h\\u00f4teli\\u00e8res\", \"Anglais de l'h\\u00f4tellerie I\", \"Bureautique appliqu\\u00e9e\"]}, {\"number\": 2, \"modules\": [\"Gestion et comptabilit\\u00e9 d'exploitation\", \"Techniques de service en restauration (F&B)\", \"Communication professionnelle & Relation client\", \"Allemand ou Espagnol h\\u00f4telier I\"]}, {\"number\": 3, \"modules\": [\"Management d'\\u00e9quipes h\\u00f4teli\\u00e8res\", \"Yield Management & Tarification dynamique\", \"Marketing h\\u00f4telier et promotion digitale\", \"L\\u00e9gislation h\\u00f4teli\\u00e8re et touristique\"]}, {\"number\": 4, \"modules\": [\"Projet d'\\u00e9v\\u00e9nementiel ou d'exploitation h\\u00f4teli\\u00e8re\", \"Stage de 6 mois dans un \\u00e9tablissement h\\u00f4telier conventionn\\u00e9\", \"M\\u00e9moire de stage\"]}]"
     }
   ],
   "settings": [
@@ -178,16 +276,8 @@
       "instagram": "https://instagram.com",
       "linkedin": "https://linkedin.com",
       "twitter": "",
-      "gaPropertyId": null,
-      "gaCredentialsJson": null,
       "metaPixelId": null,
-      "metaAccessToken": null,
-      "gaClientId": null,
-      "gaClientSecret": null,
-      "gaRefreshToken": null,
-      "googleClientId": null,
-      "googleClientSecret": null,
-      "googleRefreshToken": null
+      "metaAccessToken": null
     }
   ],
   "campuses": [
@@ -196,124 +286,17 @@
       "name": "INSIM Alger",
       "website": "https://insim-alger.com",
       "facebook": "https://facebook.com/insimalger",
-      "sieges": "[{\"id\":101,\"name\":\"Siège principal Hydra\",\"city\":\"Alger (Hydra)\",\"address\":\"Rue Djenane El Malik, Hydra, Alger\",\"phone\":\"+213 (0) 21 60 21 21, +213 (0) 21 60 21 22\",\"email\":\"contact@insim-alger.com, Hydra@insim-alger.com\",\"googleMapsLink\":\"https://www.google.com/maps/place/36.7431,3.0298\",\"lat\":\"36.7431\",\"lng\":\"3.0298\"},{\"id\":102,\"name\":\"Annexe Dély Ibrahim\",\"city\":\"Alger (Dély Ibrahim)\",\"address\":\"12 Bois des Cars, Dély Ibrahim, Alger\",\"phone\":\"+213 (0) 21 91 10 10\",\"email\":\"delyibrahim@insim-alger.com\",\"googleMapsLink\":\"https://www.google.com/maps/place/36.7525,2.9833\",\"lat\":\"36.7525\",\"lng\":\"2.9833\"}]"
+      "sieges": "[{\"id\": 101, \"name\": \"Si\\u00e8ge principal Hydra\", \"city\": \"Alger (Hydra)\", \"address\": \"Rue Djenane El Malik, Hydra, Alger\", \"phone\": \"+213 (0) 21 60 21 21, +213 (0) 21 60 21 22\", \"email\": \"contact@insim-alger.com, Hydra@insim-alger.com\", \"googleMapsLink\": \"https://www.google.com/maps/place/36.7431,3.0298\", \"lat\": \"36.7431\", \"lng\": \"3.0298\"}, {\"id\": 102, \"name\": \"Annexe D\\u00e9ly Ibrahim\", \"city\": \"Alger (D\\u00e9ly Ibrahim)\", \"address\": \"12 Bois des Cars, D\\u00e9ly Ibrahim, Alger\", \"phone\": \"+213 (0) 21 91 10 10\", \"email\": \"delyibrahim@insim-alger.com\", \"googleMapsLink\": \"https://www.google.com/maps/place/36.7525,2.9833\", \"lat\": \"36.7525\", \"lng\": \"2.9833\"}]"
     },
     {
       "id": 2,
       "name": "INSIM Tizi Ouzou",
       "website": "https://insim-tiziouzou.com",
       "facebook": "https://facebook.com/insimtizi",
-      "sieges": "[{\"id\":201,\"name\":\"Campus Principal\",\"city\":\"Tizi Ouzou\",\"address\":\"Nouvelle Ville, Tizi Ouzou\",\"phone\":\"+213 (0) 26 21 34 34\",\"email\":\"contact@insimtizi.com\",\"googleMapsLink\":\"https://www.google.com/maps/place/36.7022,4.0538\",\"lat\":\"36.7022\",\"lng\":\"4.0538\"}]"
+      "sieges": "[{\"id\": 201, \"name\": \"Campus Principal\", \"city\": \"Tizi Ouzou\", \"address\": \"Nouvelle Ville, Tizi Ouzou\", \"phone\": \"+213 (0) 26 21 34 34\", \"email\": \"contact@insimtizi.com\", \"googleMapsLink\": \"https://www.google.com/maps/place/36.7022,4.0538\", \"lat\": \"36.7022\", \"lng\": \"4.0538\"}]"
     }
   ],
-  "leads": [
-    {
-      "id": 1,
-      "name": "Mourad Amara",
-      "email": "mourad.amara@gmail.com",
-      "phone": "0555234567",
-      "formationId": "bts-developpeur-web-et-mobile",
-      "formationTitle": "BTS Développeur Web et Mobile",
-      "createdAt": 1780828257056
-    },
-    {
-      "id": 2,
-      "name": "Sarah Bouazza",
-      "email": "sarah.b@yahoo.fr",
-      "phone": "0661987654",
-      "formationId": "bts-comptabilite-et-gestion",
-      "formationTitle": "BTS Comptabilité et Gestion",
-      "createdAt": 1780914657056
-    },
-    {
-      "id": 3,
-      "name": "Kenza Merabti",
-      "email": "kenza.merab@outlook.com",
-      "phone": "0770123456",
-      "formationId": "bt-secretariat-de-direction",
-      "formationTitle": "BT Secrétariat de Direction",
-      "createdAt": 1781001057056
-    },
-    {
-      "id": 4,
-      "name": "Yacine Kaci",
-      "email": "yacine.kaci@gmail.com",
-      "phone": "0552456789",
-      "formationId": "bts-administration-et-securite-des-reseaux-informatiques",
-      "formationTitle": "BTS Administration et Sécurité des Réseaux Informatiques",
-      "createdAt": 1781087457056
-    },
-    {
-      "id": 5,
-      "name": "Amina Larabi",
-      "email": "amina.l@gmail.com",
-      "phone": "0699887766",
-      "formationId": "cmp-agent-d-accueil-et-reception",
-      "formationTitle": "CMP Agent d'Accueil et Réception",
-      "createdAt": 1781087457056
-    }
-  ],
-  "registrations": [
-    {
-      "id": 1,
-      "nom": "Ait Ali",
-      "prenom": "Karim",
-      "birthDate": "2005-04-12",
-      "birthPlace": "Bejaia",
-      "phone": "0550998877",
-      "email": "karim.aitali@gmail.com",
-      "address": "Cité Ihaddaden, Bejaia",
-      "lastDegree": "Baccalauréat",
-      "selectedCategory": "bts",
-      "selectedFiliere": "informatique-numerique",
-      "selectedFormation": "BTS Développeur Web et Mobile",
-      "createdAt": 1780655457056
-    },
-    {
-      "id": 2,
-      "nom": "Belkacemi",
-      "prenom": "Lyna",
-      "birthDate": "2006-09-18",
-      "birthPlace": "El Kseur",
-      "phone": "0662334455",
-      "email": "lyna.belk@gmail.com",
-      "address": "Aamriw, Bejaia",
-      "lastDegree": "Baccalauréat",
-      "selectedCategory": "bts",
-      "selectedFiliere": "sciences-gestion",
-      "selectedFormation": "BTS Comptabilité et Gestion",
-      "createdAt": 1780914657056
-    },
-    {
-      "id": 3,
-      "nom": "Mansouri",
-      "prenom": "Sofiane",
-      "birthDate": "2007-02-25",
-      "birthPlace": "Bejaia",
-      "phone": "0771882299",
-      "email": "sof.mansouri@hotmail.com",
-      "address": "Tichy, Bejaia",
-      "lastDegree": "2ème Année Secondaire",
-      "selectedCategory": "bt",
-      "selectedFiliere": "commerce-gestion-bt",
-      "selectedFormation": "BT Vente et Commerce",
-      "createdAt": 1781001057056
-    },
-    {
-      "id": 4,
-      "nom": "Sidhoum",
-      "prenom": "Fatiha",
-      "birthDate": "2008-07-30",
-      "birthPlace": "Bejaia",
-      "phone": "0656778899",
-      "email": "fatiha.sidhoum@gmail.com",
-      "address": "Sidi Ahmed, Bejaia",
-      "lastDegree": "4ème Année Moyenne",
-      "selectedCategory": "cmp",
-      "selectedFiliere": "bureau-cmp",
-      "selectedFormation": "CMP Opérateur de Saisie",
-      "createdAt": 1781087457056
-    }
-  ],
+  "leads": [],
+  "registrations": [],
   "messages": []
 }

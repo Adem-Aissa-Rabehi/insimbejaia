@@ -28,14 +28,14 @@
 
 ### Typography
 
-- **Heading Font:** EB Garamond
-- **Body Font:** Crimson Text
-- **Mood:** academic, old-school, university, research, serious, traditional
-- **Google Fonts:** [EB Garamond + Crimson Text](https://fonts.google.com/share?selection.family=Crimson+Text:wght@400;600;700|EB+Garamond:wght@400;500;600;700;800)
+- **Heading Font:** Inter
+- **Body Font:** Inter
+- **Mood:** clean, modern, professional, academic, elegant, geometric
+- **Google Fonts:** [Inter](https://fonts.google.com/specimen/Inter)
 
 **CSS Import:**
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 ```
 
 ### Spacing Variables

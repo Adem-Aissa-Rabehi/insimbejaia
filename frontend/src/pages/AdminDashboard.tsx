@@ -200,6 +200,61 @@ function AdminDashboard() {
   const [toast, setToast] = useState(null); // { message, type: 'success' | 'error' }
   const [confirmModal, setConfirmModal] = useState(null); // { message, onConfirm, onCancel }
 
+  // JSON Import States
+  const [showImportModal, setShowImportModal] = useState(false);
+  const [importFile, setImportFile] = useState(null);
+  const [importing, setImporting] = useState(false);
+  const [importResult, setImportResult] = useState(null);
+
+  const handleImportFileChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setImportFile(e.target.files[0]);
+    }
+  };
+
+  const handleImportSubmit = async (e) => {
+    e.preventDefault();
+    if (!importFile) return;
+
+    setImporting(true);
+    setImportResult(null);
+
+    const formData = new FormData();
+    formData.append('file', importFile);
+
+    try {
+      const res = await fetch('/api/formations/import-json', {
+        method: 'POST',
+        body: formData
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setImportResult(data);
+        showToast(`${data.imported_count} formations traitées !`);
+        
+        // Refresh formations data
+        const resForms = await fetch('/formations-data');
+        if (resForms.ok) setFormations(await resForms.json());
+        
+        // Refresh categories and filieres
+        const [resCats, resFils] = await Promise.all([
+          fetch('/categories'),
+          fetch('/filieres')
+        ]);
+        if (resCats.ok) setCategories(await resCats.json());
+        if (resFils.ok) setFilieres(await resFils.json());
+      } else {
+        const errData = await res.json();
+        showToast(errData.detail || "Erreur lors de l'importation.", "error");
+      }
+    } catch (err) {
+      console.error(err);
+      showToast("Erreur de connexion au serveur", "error");
+    } finally {
+      setImporting(false);
+    }
+  };
+
   // Multi-input States for settings
   const [phonesList, setPhonesList] = useState(['']);
   const [mobilesList, setMobilesList] = useState(['']);
@@ -1727,9 +1782,18 @@ function AdminDashboard() {
                   <h2>Gestion du Catalogue (CMS)</h2>
                   <p style={{ color: 'var(--text-muted)' }}>Configurez la hiérarchie du catalogue d'études : les catégories, puis les filières et enfin les spécialités.</p>
                 </div>
-                <button onClick={handleOpenAddCategoryModal} className="btn btn-primary" style={{ gap: '0.25rem' }}>
-                  <Plus size={16} /> Créer une Catégorie
-                </button>
+                <div style={{ display: 'flex', gap: '0.75rem' }}>
+                  <button 
+                    onClick={() => { setImportFile(null); setImportResult(null); setShowImportModal(true); }} 
+                    className="btn btn-secondary" 
+                    style={{ gap: '0.35rem', display: 'flex', alignItems: 'center', borderColor: 'var(--primary)', color: 'var(--primary)' }}
+                  >
+                    <span>📥</span> Importer JSON
+                  </button>
+                  <button onClick={handleOpenAddCategoryModal} className="btn btn-primary" style={{ gap: '0.25rem', display: 'flex', alignItems: 'center' }}>
+                    <Plus size={16} /> Créer une Catégorie
+                  </button>
+                </div>
               </div>
 
               {/* Recursive Accordion Hierarchy */}
@@ -1811,7 +1875,7 @@ function AdminDashboard() {
                                             <div key={form.id} className="admin-cms-header-row" style={{ padding: '1rem 1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', backgroundColor: '#ffffff' }}>
                                               <div>
                                                 <span style={{ fontSize: '0.65rem', fontWeight: '800', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Spécialité (Niveau 3)</span>
-                                                <h5 style={{ margin: 0, fontSize: '1rem', color: 'var(--text-heading)', fontWeight: '600' }}>BTS - {form.title}</h5>
+                                                <h5 style={{ margin: 0, fontSize: '1rem', color: 'var(--text-heading)', fontWeight: '600' }}>{form.title}</h5>
                                                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Brochure : {form.brochure || 'Aucune brochure'}</span>
                                               </div>
                                               <div className="admin-cms-actions-row">
@@ -2588,6 +2652,106 @@ function AdminDashboard() {
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem', marginTop: '2rem', borderTop: '1px solid var(--border)', paddingTop: '1.25rem' }}>
                 <button type="button" onClick={() => setShowSiegeModal(false)} className="btn btn-secondary">Annuler</button>
                 <button type="submit" className="btn btn-primary">Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* IMPORT FORMATIONS MODAL */}
+      {showImportModal && (
+        <div className="modal-overlay">
+          <div className="modal-content" style={{ maxWidth: '550px' }}>
+            <h3 style={{ fontSize: '1.35rem', marginBottom: '1rem', borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>📥</span> Importer des formations (JSON)
+            </h3>
+            
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1.25rem', lineHeight: '1.4' }}>
+              Importez un fichier JSON contenant vos formations. Le système prend en charge les formats de fichier <strong>bts.json</strong> et <strong>cmp_bt.json</strong> (structures avec <em>formations</em> ou <em>formations_additionnelles</em>).
+            </p>
+
+            <form onSubmit={handleImportSubmit}>
+              <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600' }}>Fichier JSON de configuration *</label>
+                
+                <label
+                  htmlFor="json-import-upload"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    padding: '1rem',
+                    border: '2px dashed var(--border)',
+                    borderRadius: 'var(--radius-md)',
+                    cursor: 'pointer',
+                    backgroundColor: importFile ? 'rgba(0,64,125,0.04)' : 'var(--bg)',
+                    borderColor: importFile ? 'var(--primary)' : 'var(--border)',
+                    transition: 'all 0.2s',
+                    fontSize: '0.9rem',
+                    color: importFile ? 'var(--primary)' : 'var(--text-muted)',
+                    textAlign: 'center',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <span style={{ fontSize: '1.5rem' }}>📦</span>
+                  <span style={{ fontWeight: '500' }}>
+                    {importFile ? importFile.name : 'Sélectionnez un fichier JSON...'}
+                  </span>
+                </label>
+                
+                <input
+                  id="json-import-upload"
+                  type="file"
+                  accept=".json,application/json"
+                  style={{ display: 'none' }}
+                  onChange={handleImportFileChange}
+                />
+              </div>
+
+              {importResult && (
+                <div style={{ 
+                  backgroundColor: importResult.success ? '#ecfdf5' : '#fef2f2', 
+                  border: `1px solid ${importResult.success ? '#10b981' : '#f87171'}`, 
+                  borderRadius: 'var(--radius-md)', 
+                  padding: '1rem', 
+                  marginBottom: '1.5rem',
+                  fontSize: '0.88rem' 
+                }}>
+                  <div style={{ fontWeight: '700', color: importResult.success ? '#047857' : '#b91c1c', marginBottom: '0.5rem' }}>
+                    {importResult.success ? '✓ Importation terminée avec succès !' : '✕ Erreur lors de l\'importation'}
+                  </div>
+                  <div>Formations importées/mises à jour : <strong>{importResult.imported_count}</strong></div>
+                  
+                  {importResult.errors && importResult.errors.length > 0 && (
+                    <div style={{ marginTop: '0.5rem' }}>
+                      <div style={{ fontWeight: '600', color: '#b91c1c' }}>Erreurs rencontrées ({importResult.errors.length}) :</div>
+                      <ul style={{ maxHeight: '120px', overflowY: 'auto', paddingLeft: '1.25rem', marginTop: '0.25rem', color: '#7f1d1d', listStyleType: 'disc' }}>
+                        {importResult.errors.map((err, i) => (
+                          <li key={i}>{err}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1.25rem', marginTop: '1.5rem' }}>
+                <button 
+                  type="button" 
+                  onClick={() => { setShowImportModal(false); setImportFile(null); setImportResult(null); }} 
+                  className="btn btn-secondary"
+                  disabled={importing}
+                >
+                  Fermer
+                </button>
+                <button 
+                  type="submit" 
+                  className="btn btn-primary" 
+                  disabled={importing || !importFile}
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                >
+                  {importing ? 'Importation en cours...' : 'Lancer l\'import'}
+                </button>
               </div>
             </form>
           </div>

@@ -1,0 +1,95 @@
+{
+  "etablissement": "INSIM Béjaia",
+  "formations": [
+    {
+      "titre": "Administration et Sécurité des Réseaux Informatiques",
+      "programmes": {
+        "semestre_1": ["Système d'exploitation Windows", "Système d'exploitation linux", "Structure Machine", "Technique d'expression", "Anglais", "Bureautique"],
+        "semestre_2": ["Réseaux et sécurité réseau informatique", "Les réseaux WAN", "Administrer les équipements réseau", "Administration des services Linux", "Administration des services Windows", "Analyse des vulnérabilités informatiques", "Technique d'expression", "Anglais", "Gestion des risques de la sécurité de l'information"],
+        "semestre_3": ["Programmation Script et DevNet", "Cryptographie", "Hygiène et sécurité", "Protection du consommateur", "Les réseaux VPN", "Administration des services", "Surveillance sécurité du réseau", "Nouvelles tendances des réseaux", "Gestion des risques de la sécurité de l'information"],
+        "semestre_4": ["Administration du service d'authentification", "Maintenance des réseaux", "Administrer les équipements sécurité réseau", "Haute disponibilité des réseaux et des systèmes", "Méthodologie"]
+      }
+    },
+    {
+      "titre": "Agence de voyage",
+      "programmes": {
+        "semestre_1": ["Elaboration des produits touristiques", "Accueil des clients", "Vente des produits touristiques", "Réservation des prestations et suivi", "Informatique et systèmes automatisés", "Techniques d'expressions (Arabe-Français-Anglais)", "Géographie et histoire des civilisations", "Economie", "Droit"],
+        "semestre_2": ["Elaboration des produits touristiques", "Accueil des clients", "Vente des produits touristiques", "Réservation des prestations et suivi", "Gestion commerciale et comptable", "Informatique et systèmes automatisés", "Techniques d'expressions (Arabe-Français-Anglais)", "Géographie et histoire des civilisations", "Economie"],
+        "semestre_3": ["Elaboration des produits touristiques", "Accueil des clients", "Vente des produits touristiques", "Réservation des prestations et suivi", "Gestion commerciale et comptable", "Informatique et systèmes automatisés", "Techniques d'expressions (Arabe-Français-Anglais)", "Géographie et histoire des civilisations"],
+        "semestre_4": ["Vente des produits touristiques", "Réservation des prestations et suivi", "Gestion commerciale et comptable", "Informatique et systèmes automatisés", "Techniques de gestion", "Comptabilité", "Marketing", "Droit"]
+      }
+    },
+    {
+      "titre": "Assurance",
+      "programmes": {
+        "semestre_1": ["Examen du risque", "Détermination des besoins en assurance", "Élaboration des propositions", "Établissement des contrats d'assurance", "Protection et prévention", "Technique d'expression et de communication", "Droit civil", "Droit commercial et assurance", "Économie d'entreprise", "Comptabilité générale", "Marketing", "Informatique", "Mathématiques générales", "Anglais"],
+        "semestre_2": ["Examen du risque", "Élaboration des propositions", "Établissement des contrats d'assurance", "Gestion des contrats d'assurance", "Gestion des états des sinistres", "Protection et prévention", "Technique d'expression et de communication", "Droit civil", "Droit commercial et assurance", "Comptabilité générale", "Marketing", "Mathématiques financières", "Statistiques", "Informatique"],
+        "semestre_3": ["Gestion des contrats d'assurance", "Gestion des états des sinistres", "Gestion des documents administratifs", "Gestion des états de production", "Contact de l'environnement", "Protection et prévention", "Technique d'expression et de communication", "Droit civil", "Droit commercial et assurance", "Économie d'entreprise", "Mathématiques financières", "Comptabilité générale", "Statistiques", "Informatique"],
+        "semestre_4": ["Détermination des besoins en assurance", "Élaboration des propositions", "Gestion des contrats d'assurance", "Gestion des états des sinistres", "Gestion des documents administratifs", "Gestion des états de production", "Contact de l'environnement", "Droit commercial et assurance", "Économie d'entreprise", "Mathématiques financières", "Comptabilité générale", "Statistiques", "Informatique", "Anglais", "Méthodologie"]
+      }
+    },
+    {
+      "titre": "Banque",
+      "programmes": {
+        "semestre_1": ["Gestion de la clientèle", "Réalisation des opérations de dépôt", "Encaissement des effets de commerce", "Exécution des opérations liées a l'achat ou la vente des valeur mobiliére", "Réalisation de l'opération d'octroi de crédit", "Technique d'expression", "Mathématique financière", "Droit commercial et bancaire", "Fiscalité"],
+        "semestre_2": ["Réalisation des opérations de dépôt", "Réalisation des opérations de retrait et de versement (DA et devise)", "Encaissement des effets de commerce", "Exécution des opérations liées à l'achat ou la vente des valeurs mobilières", "Réalisation de l'opération d'octroi de crédit", "Suivi des crédits octroyés", "Technique d'expression", "Comptabilité des opérations financières", "Informatique", "Marketing bancaire", "Mathématiques financiers", "Économie générale et monétaire", "Fiscalité"],
+        "semestre_3": ["Identification des règles de protection et de prévention", "Réalisation des opérations de retrait et de versement", "Exécution des opérations de virement", "Vérification des opérations effectuées", "Etudier le dossier de crédit", "Evaluation des risques bancaires", "Comptabilité des entreprises économiques du commerce", "Statistiques et probabilité", "Anglais technique", "Économie générale et monétaire"],
+        "semestre_4": ["Réalisation des opérations de retrait et de versement (DA et devise)", "Exécution des opérations de virement", "Vérification des différentes opérations effectuées", "Etudier le dossier de crédit", "Evaluation des risques bancaires liés aux crédits octroyés", "Suivi des crédits octroyés", "Gestion des opérations du commerce extérieur", "Identification des règles de protection et de prévention", "Marketing bancaire", "Anglais technique", "Méthodologie"]
+      }
+    },
+    {
+      "titre": "Bases de Données",
+      "programmes": {
+        "semestre_1": ["Structure machine", "Manipulation des systèmes d'exploitation", "Bureautique et internet", "Algorithmique", "Programmation procédurale", "Organisation et gestion des entreprises"],
+        "semestre_2": ["Conception des bases de données en modèle relationnel", "UML", "Manipulation des bases de données relationnelles", "Programmation Orientée Objet", "Réseau", "Communication professionnelle", "Anglais technique"],
+        "semestre_3": ["Implémentation des bases de données sous SGBD serveur", "Programmation Orienté Objet", "Réseau informatique", "Communication professionnelle", "Anglais technique", "Protection du consommateur", "Gestion des bases de donneés pour le web"],
+        "semestre_4": ["Administration des bases de données sous SGBD serveur", "Application d'accès aux bases de données à distance", "Teste du produit final et documentation", "Gestion de projet", "Méthodologie", "Technique de recherche d'emplois"]
+      }
+    },
+    {
+      "titre": "Commerce International",
+      "programmes": {
+        "semestre_1": ["Pratique du commerce international", "Prospection à l'international", "Gestion prix de vente", "Environnement économique", "Environnement juridique", "Relations économiques internationales", "Mathématiques générales", "Statistiques descriptives", "Comptabilité générale", "Techniques d'expression"],
+        "semestre_2": ["Prospection à l'international", "Exploitation des moyens de communication", "Documents commerciaux", "Comptabilité analytique", "Négociations commerciales", "Mathématiques générales", "Environnement juridique", "Comptabilité générale", "Techniques d'expression", "Informatique", "Anglais commercial"],
+        "semestre_3": ["Commerce international appliqué", "Transport de marchandises à l'international", "Gestion de la qualité", "Négociations commerciales", "Techniques d'assurance", "Techniques douanières", "Comptabilité générale", "Techniques d'expression", "Financement des opérations du commerce extérieur", "Finances internationales"],
+        "semestre_4": ["Commerce international appliqué", "Transport de marchandises à l'international", "Gestion de la qualité", "Négociations commerciales", "Techniques d'assurance", "Techniques douanières", "Comptabilité générale", "Techniques d'expression", "Financement des opérations du commerce extérieur", "Finances internationales", "Informatique", "Anglais commercial", "Méthodologie", "Marketing international"]
+      }
+    },
+    {
+      "titre": "Comptabilité et gestion",
+      "programmes": {
+        "semestre_1": ["Traitement et vérification des opérations commerciales", "Gestion des obligations fiscales et parafiscales", "Gestion des relations sociales", "Comptabilité financière", "Techniques d'expressions en Langue Française", "Documents commerciaux", "L'environnement économique de l'entité", "Mathématiques financières", "Environnement juridique de l'entreprise", "Statistiques descriptives", "Notions de base en langue anglaise", "Informatique"],
+        "semestre_2": ["Traitement et vérification des opérations commerciales", "Production et contrôle de l'information financière", "Calculer les différents coûts", "Comptabilité financière", "Techniques d'expressions en Langue Française", "Fiabilisation de la qualité et du système d'information", "Comptabilité analytique d'exploitation", "L'environnement économique de l'entité", "Documents commerciaux", "Environnement juridique de l'entreprise", "Mathématiques financières"],
+        "semestre_3": ["Réaliser les opérations d'inventaire", "Production et contrôle de l'information financière", "Gestion des relations sociales (paie + droit de travail)", "Calculer les différents coûts", "Comptabilité financière", "Comptabilité publique", "Fiabilisation de la qualité et du système d'information", "Comptabilité analytique d'exploitation", "L'environnement économique de l'entité", "Environnement juridique de l'entreprise", "Mathématiques générales et notions de base des probabilités", "Notions de base en langue anglaise", "Informatique", "Techniques de communication en milieu professionnel"],
+        "semestre_4": ["Réaliser les opérations d'inventaire", "Production et contrôle de l'information financière", "Gestion des relations sociales", "Élaboration des états financiers", "Analyse de la situation financière", "Gestion budgétaire de l'entreprise", "Gestion de la trésorerie", "Comptabilité publique", "Fiabilisation de la qualité et du système d'information", "Notions de base en langue anglaise", "Informatique", "Techniques de communication en milieu professionnel"]
+      }
+    },
+    {
+      "titre": "Développeur Web et Mobile",
+      "programmes": {
+        "semestre_1": ["Les interfaces utilisateurs statiques", "Méthodes de conception des applications web", "Système d'exploitation et bureautique", "Programmation procédurale", "Traitement d'images", "Anglais technique"],
+        "semestre_2": ["Les interfaces utilisateurs interactives", "Méthodes de conception des applications web", "Programmation orientée objet", "Bases de données", "Réseau informatique", "Communication professionnelle", "Protection du consommateur"],
+        "semestre_3": ["Gestion des bases de données web", "Programmation web coté serveur", "Applications web mobile native", "Système de gestion de contenu (CMS)", "Etude de projet"],
+        "semestre_4": ["Applications web monopage coté client", "Applications web mobile multiplateforme", "Développer des applications métier", "Teste du produit et documentation", "Etude de projet", "Marketing digital", "Méthodologie"]
+      }
+    },
+    {
+      "titre": "Gestion des Ressources Humaines",
+      "programmes": {
+        "semestre_1": ["Introduction à la gestion des ressources humaines", "Étude des postes de travail", "Droit du travail", "Droit de la fonction publique", "Droit de la sécurité sociale", "Communication professionnelle", "Relations humaines", "Organisation et fonctionnement des organismes", "Techniques d'expression (Français)", "Statistiques descriptives"],
+        "semestre_2": ["Politiques de la gestion des ressources humaines", "Étude des postes de travail", "Gestion prévisionnelle des ressources humaines", "Droit du travail", "Droit de la fonction publique", "Droit de la sécurité sociale", "Communication professionnelle", "Relations humaines", "Organisation et fonctionnement des organismes", "Techniques d'expression (Français)", "Statistiques descriptives"],
+        "semestre_3": ["Recrutement du personnel", "Formation et développement du personnel", "Droit du travail", "Droit de la fonction publique", "Rédaction administrative", "Psychologie du travail", "Hygiène, sécurité et environnement", "Techniques d'expression (Anglais)", "Informatique"],
+        "semestre_4": ["Évaluation du personnel", "Stimulation du personnel", "Absentéisme et roulement des effectifs", "Droit du travail", "Droit de la fonction publique", "Rédaction administrative", "Psychologie du travail", "Hygiène, sécurité et environnement", "Techniques d'expression (Anglais)", "Informatique"]
+      }
+    },
+    {
+      "titre": "Marketing",
+      "programmes": {
+        "semestre_1": ["Concepts fondamentaux du marketing", "Politique de communication", "Techniques d'expression", "Comptabilité générale", "Mathématiques générale", "Statistiques descriptives", "Environnement économique", "Politique de prix", "Politique de produit"],
+        "semestre_2": ["Techniques d'enquête marketing", "Comportement du consommateur", "Compagne de publicité", "Politique de distribution", "Gestion de la force de vente", "Comptabilité analytique", "Environnement juridique", "Mathématiques financiers", "Technique d'expression"],
+        "semestre_3": ["Techniques d'enquête marketing", "Comportement du consommateur", "Marketing stratégique", "Techniques d'aménagement des points de vente", "Gestion de la force de vente", "Gestion budgétaire", "Informatique", "Environnement juridique", "Recherche opérationnelle", "Marketing industriel", "Marketing des services", "Anglais commercial"],
+        "semestre_4": ["Marketing stratégique", "Prospection des marchés étrangers", "Négociation et relation clients", "Marketing industriel", "Marketing des services", "Informatique", "Commerce et documents commerciaux", "Anglais commercial", "Méthodologie de la recherche", "Gestion bugetaire"]
+      }
+    }
+  ]
+}

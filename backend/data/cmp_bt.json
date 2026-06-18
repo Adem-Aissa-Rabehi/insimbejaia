@@ -1,0 +1,30 @@
+{
+  "etablissement": "INSIM Béjaia",
+  "formations_additionnelles": [
+    {
+      "titre": "Agent de transit et de dédouanement (BT)",
+      "programmes": {
+        "semestre_1": ["Administration des douanes", "Organisation de la manutention et de l'enlèvement", "Techniques et procédures de dédouanement", "Régimes douaniers économiques", "Commerce international", "Documents commerciaux", "Arithmétique commerciale", "Communication et techniques d'accueil", "Techniques d'expression et rédaction", "Anglais des affaires"],
+        "semestre_2": ["Administration des douanes", "Organisation de la manutention et de l'enlèvement", "Techniques et procédures de dédouanement", "Régimes douaniers économiques", "Valeur en douane", "Système harmonisé", "Origine des marchandises", "Les transports", "Commerce international", "Documents commerciaux", "Arithmétique commerciale", "Informatique", "Techniques d'expression et rédaction", "Communication et techniques d'accueil", "Anglais des affaires"],
+        "semestre_3": ["Valeur en douane", "Tarifs douaniers", "Système harmonisé", "Origine des marchandises", "Contentieux douanier", "Assurance de marchandises", "Fiscalité douanière", "Communication et techniques d'accueil", "Informatique"],
+        "semestre_4": ["Tarifs douaniers", "Contentieux douanier", "Assurance de marchandises", "Fiscalité douanière", "Module d'évaluation"]
+      }
+    },
+    {
+      "titre": "Banque (CMP)",
+      "programmes": {
+        "semestre_1": ["Réception de la clientèle", "Réalisation des opérations de dépôts", "Technique d'expression et de communication", "Droit civil et commercial", "Initiation à l'économie d'entreprise", "Commerce et documents commerciaux", "Initiation à la technique comptable", "Arithmétiques commerciales", "Législation", "Initiation à l'économie générale", "Anglais", "Opérations classiques de banque", "Informatique"],
+        "semestre_2": ["Réalisation des opérations de dépôts", "Réalisation des opérations de retrait", "Réalisation des opérations de virement", "Technique d'expression et de communication", "Droit civil et commercial", "Initiation à l'économie d'entreprise", "Commerce et documents commerciaux", "Initiation à la technique comptable", "Arithmétiques commerciales", "Législation", "Initiation à l'économie générale", "Anglais", "Opérations classiques de banque", "Informatique"],
+        "semestre_3": ["Réalisation des opérations de retrait", "Réalisation des opérations de virement", "Contrôle des opérations effectuées", "Technique d'expression et de communication", "Initiation à l'économie d'entreprise", "Commerce et documents commerciaux", "Initiation à la technique comptable", "Arithmétiques commerciales", "Initiation à l'économie générale", "Anglais", "Opérations classiques de banque", "Informatique"]
+      }
+    },
+    {
+      "titre": "Comptabilité (CMP)",
+      "programmes": {
+        "semestre_1": ["Étude et classement des documents de base", "Enregistrement comptable des documents", "Report et contrôle des écritures comptables", "Étude du système comptable financier", "Arithmétique commerciale", "Documents commerciaux", "Économie et organisation d'entreprise", "Informatique", "Techniques d'expression (Français)", "Correspondance commerciale", "Législation du travail", "Droit commercial"],
+        "semestre_2": ["Étude et classement des documents de base", "Enregistrement comptable des documents", "Report et contrôle des écritures comptables", "Étude du système comptable financier", "Travaux de fin d'exercice", "Études de cas pratiques de l'entité", "Arithmétique commerciale", "Documents commerciaux", "Économie et organisation d'entreprise", "Classement", "Informatique", "Techniques d'expression (Français)", "Correspondance commerciale", "Législation du travail", "Droit commercial"],
+        "semestre_3": ["Travaux de fin d'exercice", "Présentation des états financiers", "Études de cas pratiques de l'entité", "Informatique", "Techniques d'expression (Français)", "Etude du système comptable financier", "Classement"]
+      }
+    }
+  ]
+}

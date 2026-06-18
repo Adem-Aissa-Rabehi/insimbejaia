@@ -109,8 +109,11 @@ function CourseDetails() {
         <html>
           <head>
             <title>Brochure - ${formation.title}</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
             <style>
-              body { font-family: system-ui, sans-serif; padding: 3rem; text-align: center; color: #002a56; }
+              body { font-family: 'Inter', system-ui, sans-serif; padding: 3rem; text-align: center; color: #002a56; }
               .card { border: 2px solid #e2e8f0; padding: 2.5rem; max-width: 650px; margin: 0 auto; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
               h1 { margin-bottom: 0.5rem; color: #002a56; }
               h2 { color: #ff7a2d; margin-top: 0; }

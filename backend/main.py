@@ -12,6 +12,7 @@ from pydantic import BaseModel
 import sqlite3
 from dotenv import load_dotenv
 import httpx
+import re
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -444,7 +445,16 @@ def delete_filiere(filiere_id: str, db: sqlite3.Connection = Depends(get_db)):
 @app.get("/api/formations")
 def get_formations(db: sqlite3.Connection = Depends(get_db)):
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM formations")
+    cursor.execute("""
+        SELECT f.*, 
+               CASE 
+                   WHEN f.categoryId = 'bts' THEN 'BTS'
+                   WHEN f.categoryId = 'bt' THEN 'BT'
+                   WHEN f.categoryId = 'cmp' THEN 'CMP'
+                   ELSE UPPER(f.categoryId)
+               END AS categoryName
+        FROM formations f
+    """)
     rows = cursor.fetchall()
     res = []
     for r in rows:
@@ -457,7 +467,16 @@ def get_formations(db: sqlite3.Connection = Depends(get_db)):
 @app.get("/api/formations/{formation_id}")
 def get_formation(formation_id: str, db: sqlite3.Connection = Depends(get_db)):
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM formations WHERE id = ?", (formation_id,))
+    cursor.execute("""
+        SELECT f.*, 
+               CASE 
+                   WHEN f.categoryId = 'bts' THEN 'BTS'
+                   WHEN f.categoryId = 'bt' THEN 'BT'
+                   WHEN f.categoryId = 'cmp' THEN 'CMP'
+                   ELSE UPPER(f.categoryId)
+               END AS categoryName
+        FROM formations f WHERE f.id = ?
+    """, (formation_id,))
     r = cursor.fetchone()
     if not r:
         raise HTTPException(status_code=404, detail="Formation non trouvée")
@@ -573,6 +592,180 @@ def delete_formation(formation_id: str, db: sqlite3.Connection = Depends(get_db)
     cursor.execute("DELETE FROM formations WHERE id = ?", (formation_id,))
     db.commit()
     return Response(status_code=204)
+
+# IMPORT FORMATIONS FROM JSON
+@app.post("/api/formations/import-json")
+async def import_formations_json(
+    file: UploadFile = File(...),
+    db: sqlite3.Connection = Depends(get_db)
+):
+    try:
+        content = await file.read()
+        data = json.loads(content)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Fichier JSON invalide: {str(e)}")
+
+    formations_list = []
+    if isinstance(data, list):
+        formations_list = data
+    elif isinstance(data, dict):
+        if "formations" in data:
+            formations_list = data["formations"]
+        elif "formations_additionnelles" in data:
+            formations_list = data["formations_additionnelles"]
+        else:
+            if "titre" in data or "title" in data:
+                formations_list = [data]
+            else:
+                raise HTTPException(status_code=400, detail="Structure JSON non prise en charge.")
+    else:
+        raise HTTPException(status_code=400, detail="Structure JSON non prise en charge.")
+
+    cursor = db.cursor()
+    imported_count = 0
+    errors = []
+
+    for idx, item in enumerate(formations_list):
+        try:
+            title = item.get("title") or item.get("titre")
+            if not title:
+                errors.append(f"Formation #{idx+1} ignorée: titre manquant")
+                continue
+
+            category_id = item.get("categoryId") or item.get("category") or item.get("categorie")
+            if not category_id:
+                title_lower = str(title).lower()
+                if "bts" in title_lower or "technicien supérieur" in title_lower or "technicien superieur" in title_lower:
+                    category_id = "bts"
+                elif "bt" in title_lower or "technicien" in title_lower:
+                    category_id = "bt"
+                elif "cmp" in title_lower or "maîtrise professionnelle" in title_lower or "maitrise professionnelle" in title_lower:
+                    category_id = "cmp"
+                else:
+                    category_id = "bts"
+
+            category_id = category_id.lower().strip()
+            if "technicien superieur" in category_id or "technicien supérieure" in category_id or "technicien superieure" in category_id:
+                category_id = "bts"
+            elif "technicien" in category_id and "supérieur" not in category_id and "superieur" not in category_id:
+                category_id = "bt"
+            elif "maitrise" in category_id or "maîtrise" in category_id:
+                category_id = "cmp"
+
+            # Check if category exists
+            cursor.execute("SELECT id FROM categories WHERE id = ?", (category_id,))
+            if not cursor.fetchone():
+                cat_name = {
+                    "bts": "Brevet de Technicien Supérieur (BTS)",
+                    "bt": "Brevet de Technicien (BT)",
+                    "cmp": "Certificat de Maîtrise Professionnelle (CMP)"
+                }.get(category_id, f"Catégorie {category_id.upper()}")
+                cursor.execute("INSERT INTO categories (id, name) VALUES (?, ?)", (category_id, cat_name))
+
+            # Determine filiere
+            filiere_id = item.get("filiereId") or item.get("filiere") or item.get("filiere_id")
+            if not filiere_id:
+                title_lower = str(title).lower()
+                if any(x in title_lower for x in ["réseau", "reseau", "informatique", "web", "mobile", "dactylographie", "saisie", "ordinateur", "donnée", "donnee"]):
+                    filiere_id = "informatique"
+                else:
+                    filiere_id = "gestion"
+
+            filiere_id = filiere_id.lower().strip()
+            if not filiere_id.startswith(f"{category_id}-"):
+                filiere_id = f"{category_id}-{filiere_id}"
+
+            filiere_name = "Informatique" if "informatique" in filiere_id else "Gestion"
+
+            # Check if filiere exists
+            cursor.execute("SELECT id FROM filieres WHERE id = ?", (filiere_id,))
+            if not cursor.fetchone():
+                cursor.execute("INSERT INTO filieres (id, name, categoryId) VALUES (?, ?, ?)", (filiere_id, filiere_name, category_id))
+
+            slug = item.get("id") or "".join(c if c.isalnum() else "-" for c in title.lower()).strip("-")
+            if not slug.startswith(f"{category_id}-"):
+                slug = f"{category_id}-{slug}"
+            slug = re.sub(r'-+', '-', slug)
+            # Remove accents from slug
+            slug = slug.lower()
+            slug = re.sub(r'[éèêëàâäôöûüç]', lambda m: {
+                'é':'e', 'è':'e', 'ê':'e', 'ë':'e',
+                'à':'a', 'â':'a', 'ä':'a',
+                'ô':'o', 'ö':'o',
+                'û':'u', 'ü':'u',
+                'ç':'c'
+            }[m.group(0)], slug)
+            slug = re.sub(r'[^a-z0-9-]', '', slug)
+            slug = re.sub(r'-+', '-', slug).strip('-')
+
+            description = item.get("description") or f"Formation de niveau {category_id.upper()} en {title}."
+            
+            duration = item.get("duration") or item.get("duree")
+            if not duration:
+                duration = "30 mois" if category_id == "bts" else ("24 mois" if category_id == "bt" else "12 mois")
+
+            objectives_data = item.get("objectives") or item.get("objectifs") or []
+            if isinstance(objectives_data, str):
+                try:
+                    objectives_data = json.loads(objectives_data)
+                except Exception:
+                    objectives_data = [objectives_data]
+            elif not isinstance(objectives_data, list):
+                objectives_data = []
+
+            semesters_list = []
+            programmes = item.get("programmes") or item.get("semesters") or {}
+            
+            if isinstance(programmes, list):
+                semesters_list = programmes
+            elif isinstance(programmes, dict):
+                for key, modules in programmes.items():
+                    num_match = re.search(r'\d+', key)
+                    sem_num = int(num_match.group(0)) if num_match else (len(semesters_list) + 1)
+                    semesters_list.append({"number": sem_num, "modules": modules})
+
+            semesters_list = sorted(semesters_list, key=lambda s: s.get("number", 0))
+
+            cursor.execute("""
+                INSERT OR REPLACE INTO formations (id, title, categoryId, filiereId, filiereName, description, duration, objectives, brochure, semesters)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                slug, 
+                title, 
+                category_id, 
+                filiere_id, 
+                filiere_name, 
+                description, 
+                duration, 
+                json.dumps(objectives_data), 
+                "", 
+                json.dumps(semesters_list)
+            ))
+            imported_count += 1
+        except Exception as e:
+            errors.append(f"Erreur formation '{item.get('title') or item.get('titre') or 'sans titre'}': {str(e)}")
+
+    db.commit()
+
+    # Export to dump.json to keep it in sync
+    try:
+        dump_data = {}
+        for t in ["categories", "filieres", "formations", "settings", "campuses", "leads", "registrations", "messages"]:
+            cursor.execute(f"SELECT * FROM {t}")
+            cols = [col[0] for col in cursor.description]
+            dump_data[t] = [dict(zip(cols, row)) for row in cursor.fetchall()]
+        
+        dump_path = os.path.join(BASE_DIR, "data", "dump.json")
+        with open(dump_path, "w", encoding="utf-8") as f:
+            json.dump(dump_data, f, indent=2, ensure_ascii=False)
+    except Exception as dump_err:
+        logger.error(f"Erreur lors du dump automatique après import: {dump_err}")
+
+    return {
+        "success": True, 
+        "imported_count": imported_count, 
+        "errors": errors
+    }
 
 # SETTINGS
 @app.get("/api/settings")

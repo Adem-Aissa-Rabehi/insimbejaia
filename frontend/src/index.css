@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* Color Palette (Clean Professional Branding) */
@@ -27,8 +27,8 @@
 
   /* Fonts */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'EB Garamond', serif;
-  --font-body: 'Crimson Text', serif;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -539,12 +539,11 @@ a {
   position: absolute;
   bottom: -1.5rem;
   left: -1.5rem;
-  background: rgba(19, 75, 126, 0.85);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff;
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1rem 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -555,7 +554,7 @@ a {
   font-family: var(--font-heading);
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--cyan);
+  color: var(--primary);
   line-height: 1;
 }
 
@@ -565,13 +564,15 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: var(--secondary);
   line-height: 1.3;
 }
 
 /* Stats Section */
 .stats-bar-section {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 2.5rem 0;
   border-bottom: 1px solid var(--border);
 }
@@ -633,7 +634,7 @@ a {
 /* Program Levels */
 .levels-section {
   padding: var(--space-2xl) 0;
-  background-color: var(--bg);
+  background-color: transparent;
 }
 
 .levels-grid {
@@ -709,7 +710,7 @@ a {
 /* Featured Formations */
 .featured-section {
   padding: var(--space-2xl) 0;
-  background-color: var(--primary-light);
+  background-color: rgba(19, 75, 126, 0.035);
   border-bottom: 1px solid var(--border);
 }
 
@@ -781,7 +782,7 @@ a {
 /* Why Bento Grid style */
 .why-bento-section {
   padding: var(--space-2xl) 0;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .bento-advantages-grid {
@@ -793,7 +794,7 @@ a {
 }
 
 .bento-advantage-card {
-  background-color: var(--bg);
+  background-color: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 2rem;
@@ -805,7 +806,7 @@ a {
 
 .bento-advantage-card:hover {
   border-color: var(--primary);
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 10px 25px -10px rgba(0,0,0,0.08);
 }
 
@@ -831,7 +832,7 @@ a {
 /* CTA Section Premium */
 .cta-premium-section {
   padding: var(--space-xl) 0;
-  background-color: var(--bg);
+  background-color: transparent;
 }
 
 .cta-premium-card {

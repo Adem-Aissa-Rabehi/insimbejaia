@@ -98,16 +98,17 @@ function Catalog() {
   });
 
   const getFiliereIcon = (filiereId) => {
-    switch (filiereId) {
-      case 'hotellerie-tourisme':
-        return <Globe size={20} />;
-      case 'sciences-gestion':
-        return <Award size={20} />;
-      case 'informatique-numerique':
-        return <Network size={20} />;
-      default:
-        return <Database size={20} />;
+    const id = filiereId?.toLowerCase() || '';
+    if (id.includes('informatique') || id.includes('numerique')) {
+      return <Network size={20} />;
     }
+    if (id.includes('gestion') || id.includes('commerce') || id.includes('administration')) {
+      return <Award size={20} />;
+    }
+    if (id.includes('tourisme') || id.includes('hotellerie') || id.includes('voyage')) {
+      return <Globe size={20} />;
+    }
+    return <Database size={20} />;
   };
 
   return (
@@ -158,7 +159,7 @@ function Catalog() {
                       onChange={() => handleFiliereChange(f.id)} 
                       style={{ accentColor: 'var(--primary)', width: '1rem', height: '1rem', cursor: 'pointer' }}
                     />
-                    {f.name}
+                    {f.categoryId ? `${f.categoryId.toUpperCase()} - ` : ''}{f.name}
                   </label>
                 ))}
                 {filieres.length === 0 && <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Aucun secteur défini</span>}

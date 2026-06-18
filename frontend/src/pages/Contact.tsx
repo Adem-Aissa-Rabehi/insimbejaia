@@ -141,7 +141,7 @@ function Contact() {
     // Bejaia Main Pin (Orange)
     const bejaiaIcon = window.L.divIcon({
       className: 'custom-map-pin main-pin',
-      html: `<div style="background-color: #ea4f1f; color: white; border: 2.5px solid white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(234, 79, 31, 0.4)"><span style="font-family: system-ui; font-weight: 800; font-size: 14px;">B</span></div>`,
+      html: `<div style="background-color: #ea4f1f; color: white; border: 2.5px solid white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(234, 79, 31, 0.4)"><span style="font-family: 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 14px;">B</span></div>`,
       iconSize: [32, 32],
       iconAnchor: [16, 16]
     });
@@ -150,7 +150,7 @@ function Contact() {
     const bejaiaMarker = window.L.marker([mainLat, mainLng], { icon: bejaiaIcon })
       .addTo(map)
       .bindPopup(`
-        <div style="font-family: system-ui, sans-serif; padding: 4px; min-width: 160px;">
+        <div style="font-family: 'Inter', system-ui, sans-serif; padding: 4px; min-width: 160px;">
           <h4 style="margin: 0 0 4px 0; color: #134b7e; font-size: 14px; font-weight: 700;">INSIM Bejaia</h4>
           <p style="margin: 0 0 6px 0; font-size: 11px; color: #475569; line-height: 1.4;">${settings.address ? settings.address.replace(/\|/g, '<br/>') : ''}</p>
           <div style="font-size: 11px; font-weight: 700; color: #134b7e;">${bejaiaPhones}</div>
@@ -165,7 +165,7 @@ function Contact() {
           if (s.lat && s.lng) {
             const branchIcon = window.L.divIcon({
               className: 'custom-map-pin branch-pin',
-              html: `<div style="background-color: #134b7e; color: white; border: 2px solid white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(19, 75, 126, 0.3)"><span style="font-family: system-ui; font-weight: 700; font-size: 11px;">${inst.name ? inst.name.split(' ').pop().charAt(0).toUpperCase() : 'I'}</span></div>`,
+              html: `<div style="background-color: #134b7e; color: white; border: 2px solid white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(19, 75, 126, 0.3)"><span style="font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 11px;">${inst.name ? inst.name.split(' ').pop().charAt(0).toUpperCase() : 'I'}</span></div>`,
               iconSize: [28, 28],
               iconAnchor: [14, 14]
             });
@@ -175,7 +175,7 @@ function Contact() {
             const marker = window.L.marker([parseFloat(s.lat), parseFloat(s.lng)], { icon: branchIcon })
               .addTo(map)
               .bindPopup(`
-                <div style="font-family: system-ui, sans-serif; padding: 4px; min-width: 180px;">
+                <div style="font-family: 'Inter', system-ui, sans-serif; padding: 4px; min-width: 180px;">
                   <h4 style="margin: 0 0 2px 0; color: #134b7e; font-size: 13px; font-weight: 700;">${inst.name}</h4>
                   <h5 style="margin: 0 0 5px 0; color: #ea4f1f; font-size: 12px; font-weight: 600;">${s.name}</h5>
                   <p style="margin: 0 0 6px 0; font-size: 11px; color: #475569; line-height: 1.4;">${s.address}</p>

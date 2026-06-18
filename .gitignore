@@ -1,49 +1,12 @@
-# Dependency directories
 node_modules/
-frontend/node_modules/
-backend/node_modules/
-
-# Local env files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-frontend/.env
-backend/.env
-
-# Build outputs
-dist/
-frontend/dist/
-build/
-
-# Python virtual environment & cache
+data/database.db
+uploads/
+propane-analogy-*.json
+*.zip
 .venv/
-backend/.venv/
-venv/
-ENV/
 __pycache__/
-backend/__pycache__/
 *.pyc
-*.pyo
-*.pyd
-
-# Databases & local data stores
-backend/data/database.db
-*.db
-*.sqlite3
-
-# Uploaded assets (brochures, dynamic assets)
-backend/uploads/*
-!backend/uploads/.gitkeep
-
-# IDEs & System files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Agent metadata
-.agent/
-.gemini/
-.antigravityignore
+.agent
+*.svg
+dist/

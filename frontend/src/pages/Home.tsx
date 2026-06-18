@@ -13,6 +13,7 @@ import {
   Building,
   ShieldCheck
 } from 'lucide-react';
+import TiltCard from '../components/TiltCard';
 
 function Home() {
   const [randomFormations, setRandomFormations] = useState([]);
@@ -157,7 +158,7 @@ function Home() {
           <div className="levels-grid">
             
             {/* BTS Card */}
-            <div className="level-item-card bts">
+            <TiltCard className="level-item-card bts" style={{ cursor: 'pointer' }}>
               <span className="level-badge">BTS</span>
               <h3>Technicien Supérieur</h3>
               <p>
@@ -166,10 +167,10 @@ function Home() {
               <Link to="/formations?category=BTS" className="btn btn-secondary" style={{ alignSelf: 'flex-start', marginTop: 'auto', display: 'inline-flex', gap: '0.5rem' }}>
                 Explorer BTS <ArrowRight size={14} />
               </Link>
-            </div>
+            </TiltCard>
 
             {/* BT Card */}
-            <div className="level-item-card bt">
+            <TiltCard className="level-item-card bt" style={{ cursor: 'pointer' }}>
               <span className="level-badge">BT</span>
               <h3>Technicien</h3>
               <p>
@@ -178,10 +179,10 @@ function Home() {
               <Link to="/formations?category=BT" className="btn btn-secondary" style={{ alignSelf: 'flex-start', marginTop: 'auto', display: 'inline-flex', gap: '0.5rem' }}>
                 Explorer BT <ArrowRight size={14} />
               </Link>
-            </div>
+            </TiltCard>
 
             {/* CMP Card */}
-            <div className="level-item-card cmp">
+            <TiltCard className="level-item-card cmp" style={{ cursor: 'pointer' }}>
               <span className="level-badge">CMP</span>
               <h3>Maîtrise Professionnelle</h3>
               <p>
@@ -190,7 +191,7 @@ function Home() {
               <Link to="/formations?category=CMP" className="btn btn-secondary" style={{ alignSelf: 'flex-start', marginTop: 'auto', display: 'inline-flex', gap: '0.5rem' }}>
                 Explorer CMP <ArrowRight size={14} />
               </Link>
-            </div>
+            </TiltCard>
 
           </div>
         </div>
@@ -215,7 +216,7 @@ function Home() {
 
           <div className="featured-grid">
             {randomFormations.map((formation) => (
-              <div key={formation.id} className="featured-card">
+              <TiltCard key={formation.id} className="featured-card" style={{ cursor: 'pointer' }}>
                 <div className="featured-card-meta">
                   <span className="featured-card-tag">
                     {formation.filiereName || 'Filière'}
@@ -236,7 +237,7 @@ function Home() {
                 <Link to={`/formations/${formation.id}`} className="btn btn-secondary" style={{ marginTop: 'auto', alignSelf: 'flex-start', fontSize: '0.85rem' }}>
                   Voir le programme <ArrowRight size={14} />
                 </Link>
-              </div>
+              </TiltCard>
             ))}
           </div>
         </div>
@@ -257,44 +258,44 @@ function Home() {
           <div className="bento-advantages-grid">
             
             {/* Card 1: Pedagogie (span 2) */}
-            <div className="bento-advantage-card bento-col-2">
+            <TiltCard className="bento-advantage-card bento-col-2" style={{ cursor: 'pointer' }}>
               <h3>
                 <Award size={22} style={{ color: 'var(--accent)' }} /> Excellence Académique & Corps Enseignant
               </h3>
               <p>
                 Nos enseignants sont des praticiens chevronnés et des universitaires de haut niveau. Nos programmes sont continuellement mis à jour pour s'aligner sur les besoins des entreprises algériennes et internationales, garantissant une formation solide et immédiatement opérationnelle.
               </p>
-            </div>
+            </TiltCard>
 
             {/* Card 2: Professionalisation (span 1) */}
-            <div className="bento-advantage-card">
+            <TiltCard className="bento-advantage-card" style={{ cursor: 'pointer' }}>
               <h3>
                 <Briefcase size={22} style={{ color: 'var(--cyan)' }} /> Stages & Insertion
               </h3>
               <p>
                 L'INSIM collabore étroitement avec un réseau de partenaires industriels pour assurer à chaque étudiant des stages de qualité et faciliter l'embauche post-diplôme.
               </p>
-            </div>
+            </TiltCard>
 
             {/* Card 3: Modern Campus (span 1) */}
-            <div className="bento-advantage-card">
+            <TiltCard className="bento-advantage-card" style={{ cursor: 'pointer' }}>
               <h3>
                 <Building size={22} style={{ color: 'var(--primary)' }} /> Infrastructures Modernes
               </h3>
               <p>
                 Des salles de cours climatisées, des laboratoires informatiques équipés des derniers logiciels professionnels, et un cadre d'étude stimulant au centre de Bejaia.
               </p>
-            </div>
+            </TiltCard>
 
             {/* Card 4: Accompagnement (span 2) */}
-            <div className="bento-advantage-card bento-col-2">
+            <TiltCard className="bento-advantage-card bento-col-2" style={{ cursor: 'pointer' }}>
               <h3>
                 <Users size={22} style={{ color: 'var(--cyan)' }} /> Suivi & Accompagnement Personnalisé
               </h3>
               <p>
                 Dès votre inscription et tout au long de votre cursus, nos conseillers pédagogiques vous guident dans votre projet professionnel, votre recherche de stage et votre préparation aux entretiens d'embauche.
               </p>
-            </div>
+            </TiltCard>
 
           </div>
         </div>
